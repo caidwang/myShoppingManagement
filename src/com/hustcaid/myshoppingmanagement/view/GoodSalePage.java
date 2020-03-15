@@ -1,7 +1,7 @@
-package view;
+package com.hustcaid.myshoppingmanagement.view;
 
-import dao.GoodSaleDao;
-import util.util;
+import com.hustcaid.myshoppingmanagement.dao.GoodSaleDao;
+import com.hustcaid.myshoppingmanagement.util.Util;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  *
  ******************************************************************************/
 public class GoodSalePage {
-    public static class GSEntry extends AbstractEntry {
+    public static class GSEntry extends AbstractPage {
         private String name;
         private double price;
         private int numPreserve;
@@ -42,8 +42,8 @@ public class GoodSalePage {
         do {
             List<GSEntry> list = GoodSaleDao.getByDate(LocalDate.now());
             if (list != null && list.size() > 0) {
-                AbstractEntry.printList(list);
+                AbstractPage.printList(list);
             }
-        } while (util.checkEndOrContinue());
+        } while (Util.checkEndOrContinue());
     }
 }

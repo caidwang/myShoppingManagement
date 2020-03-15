@@ -1,6 +1,6 @@
-package util;
+package com.hustcaid.myshoppingmanagement.util;
 
-import entity.Good;
+import com.hustcaid.myshoppingmanagement.entity.Good;
 
 import java.util.Comparator;
 import java.util.InputMismatchException;
@@ -14,13 +14,15 @@ import java.util.Scanner;
  *  Description:    
  *
  ******************************************************************************/
-public class util {
+public class Util {
     public static int scanIntAndCheck(int start, int end) {
         while (true) {
             Scanner in = new Scanner(System.in);
             try {
                 int choose = in.nextInt();
-                if (choose >= start && choose <= end) return choose;
+                if (choose >= start && choose <= end) {
+                    return choose;
+                }
                 System.out.print("非法输入! 请重新输入:");
             }
             catch (InputMismatchException e) {
@@ -33,9 +35,13 @@ public class util {
         while (true) {
             Scanner in = new Scanner(System.in);
             String choose = in.next();
-            if (choose.equals("y") || choose.equals("Y")) return true;
-            else if (choose.equals("n") || choose.equals("N")) return false;
-            else System.out.println("非法输入, 请重新输入: ");
+            if ("y".equals(choose) || "Y".equals(choose)) {
+                return true;
+            } else if ("n".equals(choose) || "N".equals(choose)) {
+                return false;
+            } else {
+                System.out.println("非法输入, 请重新输入: ");
+            }
         }
     }
 
@@ -62,11 +68,14 @@ public class util {
             case "numIncr":
                 list.sort(Comparator.comparingInt(Good::getGNum));
                 break;
+            default:
         }
         System.out.println("商品名称\t商品价格\t商品数量\t备注");
         for(Good g : list) {
             System.out.print(g.getGName() + "\t" + g.getGPrice() + "\t" + g.getGNum() + "\t");
-            if (note && g.getGNum() < 10) System.out.println("*该商品不足10件");
+            if (note && g.getGNum() < 10) {
+                System.out.println("*该商品不足10件");
+            }
             System.out.println();
         }
     }

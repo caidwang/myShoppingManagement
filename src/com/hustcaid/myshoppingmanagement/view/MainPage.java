@@ -1,6 +1,6 @@
-package view;
+package com.hustcaid.myshoppingmanagement.view;
 
-import util.util;
+import com.hustcaid.myshoppingmanagement.util.Util;
 
 /******************************************************************************
  *  Compilation:  
@@ -19,7 +19,7 @@ public class MainPage {
             System.out.println("                  3. 后台管理                      \n");
             System.out.println("**************************************************");
             System.out.print("请选择, 输入数字或按0退出:");
-            int choose = util.scanIntAndCheck(0, 3);
+            int choose = Util.scanIntAndCheck(0, 3);
             switch (choose) {
                 case 1:
                     goodsMaintainPage();
@@ -51,7 +51,7 @@ public class MainPage {
             System.out.println("                  5. 查询商品                      \n");
             System.out.println("**************************************************");
             System.out.print("请选择, 输入数字或按0返回上一级菜单:");
-            int choose = util.scanIntAndCheck(0, 5);
+            int choose = Util.scanIntAndCheck(0, 5);
             switch (choose) {
                 case 1:
                     goodPage.addGoods();
@@ -83,7 +83,7 @@ public class MainPage {
         System.out.println("                  2. 退出                      \n");
         System.out.println("**************************************************");
         System.out.print("请选择, 输入数字:");
-        int choose = util.scanIntAndCheck(1, 2);
+        int choose = Util.scanIntAndCheck(1, 2);
         switch (choose) {
             case 1:
                 cashPage.signIn();
@@ -103,7 +103,7 @@ public class MainPage {
             System.out.println("                  2. 售货员管理                      \n");
             System.out.println("**************************************************");
             System.out.print("请选择, 输入数字或按0返回上一级菜单:");
-            int choose = util.scanIntAndCheck(0, 2);
+            int choose = Util.scanIntAndCheck(0, 2);
             switch (choose) {
                 case 1:
                     gsPage.listSales();
@@ -131,7 +131,7 @@ public class MainPage {
             System.out.println("                  5. 查询售货员                      \n");
             System.out.println("**************************************************");
             System.out.print("请选择, 输入数字或按0返回上一级菜单:");
-            int choose = util.scanIntAndCheck(0, 5);
+            int choose = Util.scanIntAndCheck(0, 5);
             switch (choose) {
                 case 1:
                     sPage.add();

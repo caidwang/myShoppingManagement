@@ -1,4 +1,4 @@
-package entity;
+package com.hustcaid.myshoppingmanagement.entity;
 
 /******************************************************************************
  *  Compilation:  
@@ -26,7 +26,9 @@ public final class Saleman {
     }
 
     public void setSID(int SID) {
-        if (SID < 0) throw new IllegalArgumentException("SID must > 0.");
+        if (SID < 0) {
+            throw new IllegalArgumentException("SID must > 0.");
+        }
         this.SID = SID;
     }
 

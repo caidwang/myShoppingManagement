@@ -1,4 +1,4 @@
-package db;
+package com.hustcaid.myshoppingmanagement.db;
 
 import java.sql.*;
 
@@ -9,13 +9,13 @@ import java.sql.*;
  *  Description:    
  *
  ******************************************************************************/
-public class dbUtil {
-    private static final String url = "jdbc:mysql://localhost:3306/";
-    private static final String dbName = "SMS";
-    private static final String user = "jdbc";
-    private static final String password = "123456";
+public class DbUtil {
+    private static final String URL = "jdbc:mysql://localhost:3306/";
+    private static final String DB_NAME = "SMS";
+    private static final String USER = "jdbc";
+    private static final String PASSWORD = "123456";
     public static Connection getConnection() {
-        return getConnection(url+dbName, user, password);
+        return getConnection(URL + DB_NAME, USER, PASSWORD);
 
     }
 

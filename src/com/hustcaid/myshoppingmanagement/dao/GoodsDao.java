@@ -1,10 +1,11 @@
-package dao;
+package com.hustcaid.myshoppingmanagement.dao;
 
-import db.dbUtil;
-import entity.Good;
+import com.hustcaid.myshoppingmanagement.db.DbUtil;
+import com.hustcaid.myshoppingmanagement.entity.Good;
 
 import java.sql.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /******************************************************************************
  *  Compilation:  
@@ -13,18 +14,21 @@ import java.util.*;
  *  Description:    
  *
  ******************************************************************************/
-public class goodsDao {
-    private static final Set<String> property = new HashSet<String>() {{
-        add("GNAME"); add("GPRICE"); add("GNUM"); }};
+public class GoodsDao {
+    private enum properties {GNAME, GPRICE, GNUM}; // GOODS的所有属性, 表字段
 
     /**
-     * 向数据库添加商品项, 并设置商品ID
+     * 向数据库添加商品项, 并设置商品ID. 当
+     * 商品@code{good}的GName为null,价格为0, 商品数量小于0时, 认为是一个无效的@code{good}
+     * 对象. 如果商品名已存在, 插入失败.
      * @param good
      * @return 当执行成功时返回true, 否则返回false
      */
     public static boolean add(Good good) {
-        if (good == null || good.getGName() == null || good.getGPrice() == 0 || good.getGNum() < 0) return false;
-        Connection conn = db.dbUtil.getConnection();
+        if (good == null || good.getGName() == null || good.getGPrice() == 0 || good.getGNum() < 0) {
+            return false;
+        }
+        Connection conn = DbUtil.getConnection();
         PreparedStatement pstmt = null;
         Statement stmt = null;
         ResultSet rt = null;
@@ -41,7 +45,7 @@ public class goodsDao {
                 while (rt.next()) {
                     good.setGId(rt.getInt("GID"));
                 }
-                dbUtil.close(null, stmt, rt);
+                DbUtil.close(null, stmt, rt);
             }
             return result == 1;
         }
@@ -54,7 +58,7 @@ public class goodsDao {
             return false;
         }
         finally {
-            dbUtil.close(conn, pstmt, rt);
+            DbUtil.close(conn, pstmt, rt);
         }
     }
 
@@ -65,12 +69,27 @@ public class goodsDao {
      * @return 如果修改成功返回@code{true}, 修改失败返回@code{false}
      */
     public static boolean modify(Good good, String columnName) {
-        if (!property.contains(columnName)) return false;
-        if (good == null || good.getGId() < 0) return false;
-        if (columnName.equals("GNAME") && good.getGName() == null) return false;
-        else if (columnName.equals("GPRICE") && good.getGPrice() < 0) return false;
-        else if (columnName.equals("GNUM") && good.getGNum() < 0) return false;
-        Connection conn = db.dbUtil.getConnection();
+        properties pp = null;
+        for (properties p: properties.values()) {
+            if (p.name().equals(columnName)) {
+                pp = p;
+            }
+        }
+        if (pp == null) {
+            return false;
+        }
+
+        if (good == null || good.getGId() < 0) {
+            return false;
+        }
+        if (pp == properties.GNAME && good.getGName() == null) {
+            return false;
+        } else if (pp == properties.GPRICE && good.getGPrice() < 0) {
+            return false;
+        } else if (pp == properties.GNUM && good.getGNum() < 0) {
+            return false;
+        }
+        Connection conn = DbUtil.getConnection();
         PreparedStatement pstmtQueryId = null;
         PreparedStatement pstmtUpdateColumn = null;
         ResultSet idQuery = null;
@@ -81,15 +100,17 @@ public class goodsDao {
             idQuery = pstmtQueryId.executeQuery();
             if (idQuery.next()) { // GID exists.
                 pstmtUpdateColumn = conn.prepareStatement(String.format("UPDATE GOODS SET %s=? WHERE GID=?;", columnName));
-                switch (columnName) {
-                    case "GNAME":
+                switch (pp) {
+                    case GNAME:
                         pstmtUpdateColumn.setString(1, good.getGName());
                         break;
-                    case "GPRICE":
+                    case GPRICE:
                         pstmtUpdateColumn.setDouble(1, good.getGPrice());
                         break;
-                    case "GNUM":
+                    case GNUM:
                         pstmtUpdateColumn.setInt(1, good.getGId());
+                        break;
+                    default:
                 }
 
                 pstmtUpdateColumn.setInt(2, good.getGId());
@@ -107,8 +128,8 @@ public class goodsDao {
             return false;
         }
         finally {
-            db.dbUtil.close(null, pstmtQueryId, idQuery);
-            db.dbUtil.close(conn, pstmtUpdateColumn, null);
+            DbUtil.close(null, pstmtQueryId, idQuery);
+            DbUtil.close(conn, pstmtUpdateColumn, null);
         }
     }
 
@@ -118,8 +139,10 @@ public class goodsDao {
      * @return 如果对象存在并且被删除返回true, 否则返回false
      */
     public static boolean delete(Good good) {
-        if (good == null) return false;
-        Connection conn = dbUtil.getConnection();
+        if (good == null) {
+            return false;
+        }
+        Connection conn = DbUtil.getConnection();
         PreparedStatement pstmt = null;
         int result = 0;
         try {
@@ -137,7 +160,7 @@ public class goodsDao {
             return false;
         }
         finally {
-            dbUtil.close(conn, pstmt, null);
+            DbUtil.close(conn, pstmt, null);
         }
     }
     /**
@@ -146,8 +169,10 @@ public class goodsDao {
      * @return 如果存在返回商品Good对象, 不存在时返回@code{null}
      */
     public static Good isExists(String GName) {
-        if (GName == null) return null;
-        Connection conn = dbUtil.getConnection();
+        if (GName == null) {
+            return null;
+        }
+        Connection conn = DbUtil.getConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         Good good = null;
@@ -169,7 +194,7 @@ public class goodsDao {
             return good;
         }
         finally {
-            dbUtil.close(conn, pstmt, rs);
+            DbUtil.close(conn, pstmt, rs);
         }
     }
 
@@ -178,7 +203,7 @@ public class goodsDao {
      * @return 如果返回失败, 列表为空
      */
     public static List<Good> getAll() {
-        Connection conn = dbUtil.getConnection();
+        Connection conn = DbUtil.getConnection();
         List<Good> list = new LinkedList<>();
         Statement stmt = null;
         ResultSet rs = null;
@@ -200,9 +225,11 @@ public class goodsDao {
      * @return 返回包含结果的list
      */
     public static List<Good> fuzzyGet(String nameSeg) {
-        Connection conn = dbUtil.getConnection();
+        Connection conn = DbUtil.getConnection();
         List<Good> list = new LinkedList<>();
-        if (nameSeg == null || nameSeg.length() == 0) return list;
+        if (nameSeg == null || nameSeg.length() == 0) {
+            return list;
+        }
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
@@ -217,7 +244,7 @@ public class goodsDao {
             return list;
         }
         finally {
-            dbUtil.close(conn, pstmt, rs);
+            DbUtil.close(conn, pstmt, rs);
         }
     }
 
@@ -228,8 +255,10 @@ public class goodsDao {
      */
     public static List<Good> getByIDList(List<Integer> idList) {
         LinkedList<Good> list = new LinkedList<>();
-        if (idList == null || idList.size() == 0) return list;
-        Connection conn = dbUtil.getConnection();
+        if (idList == null || idList.size() == 0) {
+            return list;
+        }
+        Connection conn = DbUtil.getConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
@@ -252,7 +281,7 @@ public class goodsDao {
             return list;
         }
         finally {
-            dbUtil.close(conn, pstmt, rs);
+            DbUtil.close(conn, pstmt, rs);
         }
     }
     /**

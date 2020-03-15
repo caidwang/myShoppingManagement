@@ -1,7 +1,7 @@
 create database if NOT exists SMS;
 use SMS;
 
-drop view if exists SALELIST;
+drop com.hustcaid.myshoppingmanagement.view if exists SALELIST;
 drop table if exists GSALES;
 drop table if exists GOODS;
 drop table if exists SALESMAN;

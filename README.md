@@ -1,6 +1,8 @@
-使用JDBC和JavaSE构建的超市管理系统.
+使用JDBC和Servlet构建的基于web的超市管理系统.
 
 数据库: mySQL
+
+默认容器: tomcat
 
 数据库构建文件: `files/buildDatabase.sql`
 
@@ -8,6 +10,6 @@
 ```shell
 cd src
 [export CLASSPATH=$CLASSPATH:.]
-javac view/MainPage.java
-java view.MainPage
+javac com.hustcaid.myshoppingmanagement.view/MainPage.java
+java com.hustcaid.myshoppingmanagement.view.MainPage
 ```

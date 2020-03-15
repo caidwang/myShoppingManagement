@@ -1,4 +1,4 @@
-package entity;
+package com.hustcaid.myshoppingmanagement.entity;
 
 import java.time.LocalDate;
 
