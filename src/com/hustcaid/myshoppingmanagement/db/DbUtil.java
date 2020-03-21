@@ -14,6 +14,7 @@ public class DbUtil {
     private static final String DB_NAME = "SMS";
     private static final String USER = "jdbc";
     private static final String PASSWORD = "123456";
+
     public static Connection getConnection() {
         return getConnection(URL + DB_NAME, USER, PASSWORD);
 
@@ -57,6 +58,7 @@ public class DbUtil {
             }
         }
     }
+
     public static void close(Connection conn, PreparedStatement pstmt, ResultSet res) {
         if (res != null) {
             try {

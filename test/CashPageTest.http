@@ -1,13 +1,27 @@
 POST http://localhost:8080/cash?session-id=dingding
 Content-Type: application/json
 
-[{'gid': 2, 'amount': 1}]
+[
+  {
+    'gid': 2,
+    'amount': 1
+  }
+]
 
 ###
 
 POST http://localhost:8080/cash?session-id=dingding
 Content-Type: application/json
 
-[{'gid': 2, 'amount': 1}, {'gid': 4, 'amount': 1}]
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
 
 ###

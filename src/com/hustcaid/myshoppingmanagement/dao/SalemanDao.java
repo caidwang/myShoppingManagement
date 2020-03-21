@@ -1,7 +1,6 @@
 package com.hustcaid.myshoppingmanagement.dao;
 
 import com.hustcaid.myshoppingmanagement.db.DbUtil;
-import com.hustcaid.myshoppingmanagement.entity.Good;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
 
 import java.sql.*;
@@ -17,9 +16,9 @@ import java.util.List;
  ******************************************************************************/
 @SuppressWarnings("ALL")
 public class SalemanDao {
-    private enum property {SNAME, SPASSWORD}; // saleman表表属性
     /**
      * 向数据库添加saleman记录
+     *
      * @param sm 待添加Saleman对象, 要求sName和sPassword属性不为空
      * @return 如果操作成功, 返回true,并设置sm对象的ID, 否则返回false.
      */
@@ -46,24 +45,24 @@ public class SalemanDao {
                     sm.setSID(rs.getInt(1));
                 }
             }
-            return result==1;
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+            return result == 1;
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("售货员名称已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return result == 1;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
 
+    ; // saleman表表属性
+
     /**
      * 按照给定的saleman对象的属性值修改数据库中该对象的@code{columnName}属性
-     * @param saleman 已经修改好的saleman对象
+     *
+     * @param saleman    已经修改好的saleman对象
      * @param columnName 被修改的 列名
      * @return 如果操作成功返回true, 否则返回false
      */
@@ -100,22 +99,19 @@ public class SalemanDao {
             pstmt.setInt(2, saleman.getSID());
             result = pstmt.executeUpdate();
             return result == 1;
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("售货员名称已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return result == 1;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
 
     public static boolean modify(Saleman sm) {
-        if (sm == null ||sm.getSName() == null || sm.getSPassword() == null) return false;
+        if (sm == null || sm.getSName() == null || sm.getSPassword() == null) return false;
         Connection conn = DbUtil.getConnection();
         PreparedStatement pstmtQueryId = null;
         PreparedStatement pstmtUpdate = null;
@@ -135,22 +131,21 @@ public class SalemanDao {
             }
             return result != 0;
 
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("销售员名已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(null, pstmtQueryId, idQuery);
             DbUtil.close(conn, pstmtUpdate, null);
         }
     }
+
     /**
      * 按照id将给定的saleman对象在数据库中的记录删除
+     *
      * @param saleman 给定的saleman对象
      * @return 如果操作成功返回true, 否则返回false
      */
@@ -166,12 +161,10 @@ public class SalemanDao {
             pstmt.setInt(1, saleman.getSID());
             result = pstmt.executeUpdate();
             return result == 1;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, null);
         }
     }
@@ -195,12 +188,10 @@ public class SalemanDao {
                 sm = new Saleman(id, name, passwd);
             }
             return sm;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return sm;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
@@ -215,8 +206,7 @@ public class SalemanDao {
             rs = stmt.executeQuery("SELECT * FROM SALESMAN;");
             extractFromResultSet(list, rs);
             return list;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return list;
         }
@@ -224,6 +214,7 @@ public class SalemanDao {
 
     /**
      * 按照模糊搜索查找销售员
+     *
      * @param keyWord 模糊搜索键值, 形如"张%"
      * @return
      */
@@ -241,23 +232,23 @@ public class SalemanDao {
             rs = pstmt.executeQuery();
             extractFromResultSet(list, rs);
             return list;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return list;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
 
     private static void extractFromResultSet(List<Saleman> list, ResultSet rs) throws SQLException {
-         while (rs.next()) {
+        while (rs.next()) {
             int id = rs.getInt("SID");
             String name = rs.getString("SNAME");
             String passwd = rs.getString("SPASSWORD");
             list.add(new Saleman(id, name, passwd));
         }
     }
+
+    private enum property {SNAME, SPASSWORD}
 
 }

@@ -4,7 +4,6 @@ import com.hustcaid.myshoppingmanagement.db.DbUtil;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.GoodSaleCollection;
 
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.Iterator;
@@ -19,18 +18,6 @@ import java.util.List;
  *
  ******************************************************************************/
 public class GoodSaleDao {
-    public static class SaleLog {
-        public String name;
-        public double price;
-        public int num;
-        public int saled;
-        public SaleLog(String name, double price, int num, int saled) {
-            this.name = name;
-            this.price = price;
-            this.num = num;
-            this.saled = saled;
-        }
-    }
     public static boolean create(List<GoodSale> gsList) {
         if (gsList == null || gsList.size() == 0) {
             return false;
@@ -62,14 +49,14 @@ public class GoodSaleDao {
             }
             conn.commit();
             return true;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             try {
                 conn.rollback();
-            } catch (SQLException ee) { ee.printStackTrace(); }
+            } catch (SQLException ee) {
+                ee.printStackTrace();
+            }
             return false;
-        }
-        finally {
+        } finally {
             try {
                 conn.setAutoCommit(true);
             } catch (SQLException e) {
@@ -82,6 +69,7 @@ public class GoodSaleDao {
 
     /**
      * 按照销售日期返回销售记录
+     *
      * @param date 待查询的销售日期
      * @return GoodSale的列表, 当date非法或没有销售记录时, 列表为空.
      */
@@ -105,9 +93,25 @@ public class GoodSaleDao {
                 list.add(new GoodSaleCollection(name, price, gnum, total));
             }
             return list;
-        } catch (SQLException e) { e.printStackTrace(); return list;}
-        finally {
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return list;
+        } finally {
             DbUtil.close(conn, pstmt, rs);
+        }
+    }
+
+    public static class SaleLog {
+        public String name;
+        public double price;
+        public int num;
+        public int saled;
+
+        public SaleLog(String name, double price, int num, int saled) {
+            this.name = name;
+            this.price = price;
+            this.num = num;
+            this.saled = saled;
         }
     }
 }

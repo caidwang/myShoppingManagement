@@ -12,7 +12,10 @@ public class Good {
     private String gName;
     private double gPrice;
     private int gNum;
-    public Good() {}
+
+    public Good() {
+    }
+
     // 创建新Good时, 没有id内容
     public Good(String name, double price, int num) {
         this.gName = name;

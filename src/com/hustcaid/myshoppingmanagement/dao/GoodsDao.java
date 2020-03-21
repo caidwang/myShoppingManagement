@@ -15,12 +15,11 @@ import java.util.List;
  *
  ******************************************************************************/
 public class GoodsDao {
-    private enum properties {GNAME, GPRICE, GNUM}; // GOODS的所有属性, 表字段
-
     /**
      * 向数据库添加商品项, 并设置商品ID. 当
      * 商品@code{good}的GName为null,价格为0, 商品数量小于0时, 认为是一个无效的@code{good}
      * 对象. 如果商品名已存在, 插入失败.
+     *
      * @param good
      * @return 当执行成功时返回true, 否则返回false
      */
@@ -48,29 +47,29 @@ public class GoodsDao {
                 DbUtil.close(null, stmt, rt);
             }
             return result == 1;
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("商品名已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rt);
         }
     }
 
+    ; // GOODS的所有属性, 表字段
+
     /**
      * 修改Good的商品属性
-     * @param good, 待修改的商品对象, 其中属性修改
+     *
+     * @param good,      待修改的商品对象, 其中属性修改
      * @param columnName 待修改的商品属性的数据库列名
      * @return 如果修改成功返回@code{true}, 修改失败返回@code{false}
      */
     public static boolean modify(Good good, String columnName) {
         properties pp = null;
-        for (properties p: properties.values()) {
+        for (properties p : properties.values()) {
             if (p.name().equals(columnName)) {
                 pp = p;
             }
@@ -118,16 +117,13 @@ public class GoodsDao {
             }
             return result != 0;
 
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("商品名已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(null, pstmtQueryId, idQuery);
             DbUtil.close(conn, pstmtUpdateColumn, null);
         }
@@ -155,16 +151,13 @@ public class GoodsDao {
             }
             return result != 0;
 
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("商品名已存在.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(null, pstmtQueryId, idQuery);
             DbUtil.close(conn, pstmtUpdate, null);
         }
@@ -172,6 +165,7 @@ public class GoodsDao {
 
     /**
      * 将good对象从数据库中删除
+     *
      * @param good 待删除的商品对象,为null时方法返回false
      * @return 如果对象存在并且被删除返回true, 否则返回false
      */
@@ -187,21 +181,20 @@ public class GoodsDao {
             pstmt.setInt(1, good.getGId());
             result = pstmt.executeUpdate();
             return result == 1;
-        }
-        catch (SQLIntegrityConstraintViolationException e) {
+        } catch (SQLIntegrityConstraintViolationException e) {
             System.out.println("当前商品已存在交易信息, 无法删除.");
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, null);
         }
     }
+
     /**
      * 按照商品名称查询商品是否存在
+     *
      * @param GName 待查询的名称
      * @return 如果存在返回商品Good对象, 不存在时返回@code{null}
      */
@@ -225,18 +218,17 @@ public class GoodsDao {
                 good = new Good(id, gName, gPrice, gNum);
             }
             return good;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return good;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
 
     /**
      * 返回数据库中现有商品的列表
+     *
      * @return 如果返回失败, 列表为空
      */
     public static List<Good> getAll() {
@@ -249,8 +241,7 @@ public class GoodsDao {
             rs = stmt.executeQuery("SELECT * FROM GOODS;");
             extractFromResultSet(list, rs);
             return list;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return list;
         }
@@ -258,6 +249,7 @@ public class GoodsDao {
 
     /**
      * 按照商品名称关键字进行模糊搜索
+     *
      * @param nameSeg 通配符关键字, 形如"巧克力%", 为null时返回空list
      * @return 返回包含结果的list
      */
@@ -275,18 +267,17 @@ public class GoodsDao {
             rs = pstmt.executeQuery();
             extractFromResultSet(list, rs);
             return list;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return list;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
 
     /**
      * 根据IDlist中的id查询并返回商品的列表
+     *
      * @param idList
      * @return
      */
@@ -312,19 +303,19 @@ public class GoodsDao {
                 rs.close();
             }
             return list;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return list;
-        }
-        finally {
+        } finally {
             DbUtil.close(conn, pstmt, rs);
         }
     }
+
     /**
      * 从@code{select * from GOODS}的返回ResultSet中抽取对象添加到list中
+     *
      * @param list 返回结果的对象列表
-     * @param rs @code{select * from GOODS}的返回结果
+     * @param rs   @code{select * from GOODS}的返回结果
      * @throws SQLException
      */
     private static void extractFromResultSet(List<Good> list, ResultSet rs) throws SQLException {
@@ -336,6 +327,8 @@ public class GoodsDao {
             list.add(new Good(id, name, price, num));
         }
     }
+
+    private enum properties {GNAME, GPRICE, GNUM}
     // 商品数量减少的操作放在GoodSale中实现, 与条目增加构成事务
 }
 

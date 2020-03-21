@@ -16,6 +16,7 @@ public class GoodSale {
     private int SID;
     private LocalDate date;
     private int numToSale;
+
     public GoodSale(int GSID, int GID, int SID, LocalDate date, int num) {
         this.GSID = GSID;
         this.GID = GID;

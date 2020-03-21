@@ -1,8 +1,6 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
 
-import com.hustcaid.myshoppingmanagement.util.FeeMakerConfiguration;
-import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
@@ -11,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.hustcaid.myshoppingmanagement.util.FeeMakerConfiguration.getTemplate;
+import static com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration.getTemplate;
 
 /******************************************************************************
  *  Compilation:  

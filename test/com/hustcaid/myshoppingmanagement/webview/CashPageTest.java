@@ -11,8 +11,6 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /******************************************************************************
  *  @author Caid Wang
  *  @date 2020/3/21   

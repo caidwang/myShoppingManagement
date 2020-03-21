@@ -33,14 +33,14 @@
             </tr>
             </thead>
             <tbody>
-                <#list goodsaleColletions as entry>
-                    <tr>
-                        <td>${entry.name}</td>
-                        <td>${entry.price}</td>
-                        <td>${entry.numPreserve}</td>
-                        <td>${entry.numSaled}</td>
-                    </tr>
-                </#list>
+            <#list goodsaleColletions as entry>
+                <tr>
+                    <td>${entry.name}</td>
+                    <td>${entry.price}</td>
+                    <td>${entry.numPreserve}</td>
+                    <td>${entry.numSaled}</td>
+                </tr>
+            </#list>
             </tbody>
         </table>
     </div>

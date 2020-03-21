@@ -63,9 +63,11 @@
         </table>
     </div>
 </div>
-<div class="row col-lg-8 col-lg-offset-2 " >
+<div class="row col-lg-8 col-lg-offset-2 ">
     <div class="col-lg-2 col-lg-offset-8 text-center" style="line-height: 2;"><b>总计<span>12.99</span>元</b></div>
-    <div><button type="button" class="btn btn-primary ">结账</button> </div>
+    <div>
+        <button type="button" class="btn btn-primary ">结账</button>
+    </div>
 </div>
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>

@@ -11,13 +11,16 @@ public final class Saleman {
     private int SID;
     private String SPassword;
     private String SName;
+
     public Saleman() {
 
     }
+
     public Saleman(String SName, String SPassword) {
         this.SName = SName;
         this.SPassword = SPassword;
     }
+
     public Saleman(int SID, String newName, String newPasswd) {
         this.SID = SID;
         this.SName = newName;

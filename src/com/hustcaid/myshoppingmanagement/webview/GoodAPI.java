@@ -6,8 +6,6 @@ import com.hustcaid.myshoppingmanagement.dao.GoodsDao;
 import com.hustcaid.myshoppingmanagement.entity.Good;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,11 +33,9 @@ public class GoodAPI extends HttpServlet {
         List<Good> goods;
         if ("all".equals(pattern)) {
             goods = GoodsDao.getAll();
-        }
-        else if ("fuzzy".equals(pattern)){
+        } else if ("fuzzy".equals(pattern)) {
             goods = GoodsDao.fuzzyGet(gName + "%");
-        }
-        else {
+        } else {
             goods = new ArrayList<>();
             Good item;
             if ((item = GoodsDao.isExists(gName)) != null) {
@@ -66,8 +62,7 @@ public class GoodAPI extends HttpServlet {
         try {
             newGood = JSON.parseObject(sb.toString(), Good.class);
             cast = true;
-        }
-        catch (JSONException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
             cast = false;
         }
@@ -75,8 +70,7 @@ public class GoodAPI extends HttpServlet {
         if (cast && GoodsDao.add(newGood)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
-        }
-        else {
+        } else {
             resp.setStatus(400);
             resp.getWriter().println("{\"status\":\"FAIL\"}");
         }
@@ -111,7 +105,7 @@ public class GoodAPI extends HttpServlet {
             if (modified && GoodsDao.modify(modifiedGood)) {
                 resp.setStatus(HttpServletResponse.SC_OK);
                 resp.getWriter().println("{\"status\":\"OK\"}");
-                return ;
+                return;
             }
         }
         resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -120,13 +114,12 @@ public class GoodAPI extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String gName = preProcess(req,resp);
+        String gName = preProcess(req, resp);
         Good deletedGood = GoodsDao.isExists(gName);
         if (GoodsDao.delete(deletedGood)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
-        }
-        else {
+        } else {
             resp.setStatus(400);
             resp.getWriter().println("{\"status\":\"FAIL\"}");
         }

@@ -18,8 +18,14 @@ import java.io.IOException;
  *  Description:    
  *
  ******************************************************************************/
-public class FeeMakerConfiguration implements ServletContextListener {
-    public static final String FEEMAKER_CONFIG_NAME = "feemakerConfig";
+public class FreeMarkerConfiguration implements ServletContextListener {
+    public static final String FREEMARKER_CONFIG_NAME = "feemakerConfig";
+
+    public static Template getTemplate(HttpServlet servlet, String filename) throws IOException {
+        Configuration cfg = (Configuration) servlet.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
+        return cfg.getTemplate(filename);
+    }
+
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
@@ -56,16 +62,11 @@ public class FeeMakerConfiguration implements ServletContextListener {
         // Do not fall back to higher scopes when reading a null loop variable:
         cfg.setFallbackOnNullLoopVariable(false);
 
-        context.setAttribute(FEEMAKER_CONFIG_NAME, cfg);
+        context.setAttribute(FREEMARKER_CONFIG_NAME, cfg);
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("FeeMaker Configuration destroy.");
-    }
-
-    public static Template getTemplate(HttpServlet servlet, String filename) throws IOException {
-        Configuration cfg = (Configuration) servlet.getServletContext().getAttribute(FeeMakerConfiguration.FEEMAKER_CONFIG_NAME);
-        return cfg.getTemplate(filename);
     }
 }

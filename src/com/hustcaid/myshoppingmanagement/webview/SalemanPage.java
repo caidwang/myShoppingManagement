@@ -1,6 +1,6 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
-import com.hustcaid.myshoppingmanagement.util.FeeMakerConfiguration;
+import com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -22,7 +22,7 @@ public class SalemanPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setHeader("Content-type", "text/html; charset=utf-8");
-        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FeeMakerConfiguration.FEEMAKER_CONFIG_NAME);
+        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
         Template template = cfg.getTemplate("salemans.ftlh");
         try {
             template.process(null, resp.getWriter());

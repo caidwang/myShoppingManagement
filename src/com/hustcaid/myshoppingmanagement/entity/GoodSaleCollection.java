@@ -14,6 +14,7 @@ public class GoodSaleCollection {
     public GoodSaleCollection() {
 
     }
+
     public GoodSaleCollection(String name, double price, int numPreserve, int numSaled) {
         this.name = name;
         this.price = price;

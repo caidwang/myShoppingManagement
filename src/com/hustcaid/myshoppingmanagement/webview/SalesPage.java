@@ -1,9 +1,8 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
 import com.hustcaid.myshoppingmanagement.dao.GoodSaleDao;
-import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.GoodSaleCollection;
-import com.hustcaid.myshoppingmanagement.util.FeeMakerConfiguration;
+import com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -29,7 +28,7 @@ public class SalesPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=utf-8");
-        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FeeMakerConfiguration.FEEMAKER_CONFIG_NAME);
+        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
         Template template = cfg.getTemplate("sales.ftlh");
         List<GoodSaleCollection> goodSaleCollections = GoodSaleDao.getByDate(LocalDate.now());
         try {

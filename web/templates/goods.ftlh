@@ -34,13 +34,13 @@
     <div class="row col-md-8 col-md-offset-2" style="margin-top: 40px">
         <table class="table">
             <thead>
-                <tr>
-                    <th>商品名称</th>
-                    <th>数量</th>
-                    <th>单价</th>
-                    <th>修改</th>
-                    <th>删除</th>
-                </tr>
+            <tr>
+                <th>商品名称</th>
+                <th>数量</th>
+                <th>单价</th>
+                <th>修改</th>
+                <th>删除</th>
+            </tr>
             </thead>
             <tbody>
             <tr>
