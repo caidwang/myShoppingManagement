@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<h1 style="text-align: center">销售员管理</h1>
+<h1 style="text-align: center">商品管理</h1>
 <div class="container">
 
     <div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px">

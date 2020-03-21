@@ -2,7 +2,8 @@ package com.hustcaid.myshoppingmanagement.dao;
 
 import com.hustcaid.myshoppingmanagement.db.DbUtil;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
-import com.hustcaid.myshoppingmanagement.view.GoodSalePage.GSEntry;
+import com.hustcaid.myshoppingmanagement.entity.GoodSaleCollection;
+
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -35,15 +36,13 @@ public class GoodSaleDao {
             return false;
         }
         Connection conn = DbUtil.getConnection();
-        Statement stmt = null;
         PreparedStatement pstmtG = null;
         PreparedStatement pstmtGS = null;
         ResultSet rs = null;
         Iterator<GoodSale> it = gsList.iterator();
         try {
             conn.setAutoCommit(false);
-            stmt = conn.createStatement();
-            pstmtG = conn.prepareStatement("UPDATE GOODS SET GNUM = GNUM - ? WHERE GID= ? AND GNUM > ?;");
+            pstmtG = conn.prepareStatement("UPDATE GOODS SET GNUM = GNUM - ? WHERE GID= ? AND GNUM >= ?;");
             pstmtGS = conn.prepareStatement("INSERT INTO GSALES (GID, SID, SDATE, SNUM) VALUES (?, ?, ?, ?);");
             while (it.hasNext()) {
                 GoodSale gs = it.next();
@@ -54,8 +53,12 @@ public class GoodSaleDao {
                 pstmtGS.setInt(2, gs.getSID());
                 pstmtGS.setDate(3, Date.valueOf(gs.getDate()));
                 pstmtGS.setInt(4, gs.getNumToSale());
-                pstmtG.executeUpdate();
-                pstmtGS.executeUpdate();
+                int goodRecord = pstmtG.executeUpdate();
+                int goodSaleRecord = pstmtGS.executeUpdate();
+                if (goodRecord == 0 || goodSaleRecord == 0) {
+                    conn.rollback();
+                    return false;
+                }
             }
             conn.commit();
             return true;
@@ -82,8 +85,8 @@ public class GoodSaleDao {
      * @param date 待查询的销售日期
      * @return GoodSale的列表, 当date非法或没有销售记录时, 列表为空.
      */
-    public static List<GSEntry> getByDate(LocalDate date) {
-        LinkedList<GSEntry> list = new LinkedList<>();
+    public static List<GoodSaleCollection> getByDate(LocalDate date) {
+        LinkedList<GoodSaleCollection> list = new LinkedList<>();
         if (date == null) {
             return list;
         }
@@ -99,7 +102,7 @@ public class GoodSaleDao {
                 double price = rs.getDouble("GPRICE");
                 int gnum = rs.getInt("GNUM");
                 int total = rs.getInt("TOTAL");
-                list.add(new GSEntry(name, price, gnum, total));
+                list.add(new GoodSaleCollection(name, price, gnum, total));
             }
             return list;
         } catch (SQLException e) { e.printStackTrace(); return list;}

@@ -10,7 +10,8 @@
         <ol>
             <li><a href="/goodMaintain">商品维护</a> </li>
             <li><a href="/cash">前台收银</a> </li>
-            <li><a href="/backend">后台管理</a> </li>
+            <li><a href="/backend">销售员管理</a> </li>
+            <li><a href="/goodsales">当日销售记录</a> </li>
         </ol>
     </div>
 </body>

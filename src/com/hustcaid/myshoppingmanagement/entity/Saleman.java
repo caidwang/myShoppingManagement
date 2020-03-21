@@ -11,6 +11,9 @@ public final class Saleman {
     private int SID;
     private String SPassword;
     private String SName;
+    public Saleman() {
+
+    }
     public Saleman(String SName, String SPassword) {
         this.SName = SName;
         this.SPassword = SPassword;
@@ -32,11 +35,11 @@ public final class Saleman {
         this.SID = SID;
     }
 
-    public String getPasswd() {
+    public String getSPassword() {
         return SPassword;
     }
 
-    public void setPasswd(String SPassword) {
+    public void setSPassword(String SPassword) {
         this.SPassword = SPassword;
     }
 

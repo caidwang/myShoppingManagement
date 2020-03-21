@@ -63,7 +63,7 @@ public class SignInPage extends HttpServlet {
         String name = req.getParameter(PARAM_USERNAME);
         String password = req.getParameter(PARAM_PASSWORD);
         Saleman sm;
-        if ((sm = SalemanDao.isExists(name)) != null && sm.getPasswd().equals(password)) {
+        if ((sm = SalemanDao.isExists(name)) != null && sm.getSPassword().equals(password)) {
                 resp.sendRedirect("/cash?session-id=" + sm.getSName());
                 return;
         }

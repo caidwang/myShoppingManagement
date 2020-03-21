@@ -21,15 +21,16 @@
 
     <h1 style="text-align: center">收银平台</h1>
     <div class="container">
-        <div class="col-lg-4 col-lg-offset-4 text-center">收银员: <span>dingding</span></div>
+        <div class="col-lg-4 col-lg-offset-4 text-center">收银员: <span id="saleman">${saleman}</span></div>
         <div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px">
-            <input class="col-lg-6 col-lg-offset-3" type="text" placeholder="请输入商品" name="searchKey">
-            <button type="button" class="btn btn-default" aria-label="Left Align" id="search-good">
+            <input class="col-lg-6 col-lg-offset-3" type="text" placeholder="请输入商品" id="searchKey">
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="search-good-button">
                 <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
             </button>
             <button type="button" class="btn btn-default" aria-label="Left Align" id="add-good">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
+            <div class="candidates"></div>
         </div>
         <div class="row col-md-8 col-md-offset-2" style="margin-top: 40px">
             <table class="table">
@@ -42,30 +43,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>巧克力</td>
-                    <td>153341</td>
-                    <td><div class="col-lg-6"><input class="form-control" type="number" min="1" max="13"></div></td>
-                    <td>
-                        <button type="button" class="btn btn-default" aria-label="Left Align" id="delete-good">
-                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>豆豆</td>
-                    <td>153341</td>
-                        <td>
-                            <div class="col-lg-6">
-                                <input class="form-control" type="number" min="1" max="5">
-                            </div>
-                        </td>
-                    <td>
-                        <button type="button" class="btn btn-default" aria-label="Left Align" id="delete-good">
-                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                        </button>
-                    </td>
-                </tr>
+
                 </tbody>
             </table>
 
@@ -80,5 +58,54 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+        var searchData;
+        $("#search-good-button").click(function () {
+            var str = $("#searchKey").val();
+            $.get("/goods/" + str + "?pattern=fuzzy", function (data, status) {
+                if (status === "success") {
+                    if(data !=null){
+                        searchData = data;
+                        $(".candidates").html("");
+                        for(elemt in data){
+                            $(".candidates").append("<div onclick=\"select("+ elemt + ")\" >" + data[elemt].gName + "</div>");
+                        }
+                    }else{
+                        $(".candidates").html("");
+                    }
+                }
+            })
+        });
+        function select (index) {
+            $("tbody").append("<tr>\n" +
+                "                    <td>"+ searchData[index].gName +"</td>\n" +
+                "                    <td>"+ searchData[index].gId +"</td>\n" +
+                "                    <td><div class=\"col-lg-6\"><input class=\"form-control\" type=\"number\" min=\"1\" max=\""+ searchData[index].gNum +"\"></div></td>\n" +
+                "                    <td>\n" +
+                "                        <button type=\"button\" class=\"btn btn-default\" aria-label=\"Left Align\" id=\"delete-good\">\n" +
+                "                            <span class=\"glyphicon glyphicon-minus\" aria-hidden=\"true\"></span>\n" +
+                "                        </button>\n" +
+                "                    </td>\n" +
+                "                </tr>");
+            searchData = null;
+            $(".candidates").html("");
+            $("#searchKey").val("");
+        };
+    </script>
     </body>
 </html>
+
+<#--<tr>-->
+<#--    <td>豆豆</td>-->
+<#--    <td>153341</td>-->
+<#--    <td>-->
+<#--        <div class="col-lg-6">-->
+<#--            <input class="form-control" type="number" min="1" max="5">-->
+<#--        </div>-->
+<#--    </td>-->
+<#--    <td>-->
+<#--        <button type="button" class="btn btn-default" aria-label="Left Align" id="delete-good">-->
+<#--            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>-->
+<#--        </button>-->
+<#--    </td>-->
+<#--</tr>-->

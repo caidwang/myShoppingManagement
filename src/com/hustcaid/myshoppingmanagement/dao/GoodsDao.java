@@ -133,6 +133,43 @@ public class GoodsDao {
         }
     }
 
+    public static boolean modify(Good good) {
+        if (good == null || good.getGPrice() < 0 || good.getGNum() < 0) return false;
+        Connection conn = DbUtil.getConnection();
+        PreparedStatement pstmtQueryId = null;
+        PreparedStatement pstmtUpdate = null;
+        ResultSet idQuery = null;
+        int result = 0;
+        try {
+            pstmtQueryId = conn.prepareStatement("SELECT GID FROM GOODS WHERE GID=?;");
+            pstmtQueryId.setInt(1, good.getGId());
+            idQuery = pstmtQueryId.executeQuery();
+            if (idQuery.next()) { // GID exists.
+                pstmtUpdate = conn.prepareStatement("UPDATE GOODS SET GNAME=?,GPRICE=?,GNUM=? WHERE GID=?;");
+
+                pstmtUpdate.setString(1, good.getGName());
+                pstmtUpdate.setDouble(2, good.getGPrice());
+                pstmtUpdate.setInt(3, good.getGNum());
+                pstmtUpdate.setInt(4, good.getGId());
+                result = pstmtUpdate.executeUpdate();
+            }
+            return result != 0;
+
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("商品名已存在.");
+            return false;
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        finally {
+            DbUtil.close(null, pstmtQueryId, idQuery);
+            DbUtil.close(conn, pstmtUpdate, null);
+        }
+    }
+
     /**
      * 将good对象从数据库中删除
      * @param good 待删除的商品对象,为null时方法返回false

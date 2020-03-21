@@ -12,26 +12,18 @@ public class Good {
     private String gName;
     private double gPrice;
     private int gNum;
+    public Good() {}
+    // 创建新Good时, 没有id内容
     public Good(String name, double price, int num) {
         this.gName = name;
         this.gPrice = price;
         this.gNum = num;
     }
+
+    // 从db获得Good
     public Good(int id, String name, double price, int num) {
         this(name, price, num);
         this.gId = id;
-    }
-    public Good(int id, String name) {
-        this.gId = id;
-        this.gName = name;
-    }
-    public Good(int id, double price) {
-        this.gId = id;
-        this.gPrice = price;
-    }
-    public Good(int id, int num) {
-        this.gId = id;
-        this.gNum = num;
     }
 
     public int getGId() {

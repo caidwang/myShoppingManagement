@@ -1,6 +1,7 @@
 package com.hustcaid.myshoppingmanagement.dao;
 
 import com.hustcaid.myshoppingmanagement.db.DbUtil;
+import com.hustcaid.myshoppingmanagement.entity.Good;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
 
 import java.sql.*;
@@ -23,7 +24,7 @@ public class SalemanDao {
      * @return 如果操作成功, 返回true,并设置sm对象的ID, 否则返回false.
      */
     public static boolean add(Saleman sm) {
-        if (sm == null || sm.getSName() == null || sm.getPasswd() == null) {
+        if (sm == null || sm.getSName() == null || sm.getSPassword() == null) {
             return false;
         }
         Connection conn = DbUtil.getConnection();
@@ -33,7 +34,7 @@ public class SalemanDao {
         try {
             pstmt = conn.prepareStatement("INSERT INTO SALESMAN (SNAME, SPASSWORD) values (?, ?);");
             pstmt.setString(1, sm.getSName());
-            pstmt.setString(2, sm.getPasswd());
+            pstmt.setString(2, sm.getSPassword());
             result = pstmt.executeUpdate();
             DbUtil.close(null, pstmt, null);
             if (result == 1) {
@@ -77,10 +78,10 @@ public class SalemanDao {
             return false;
         }
         if ((pp == property.SNAME && saleman.getSName() == null)
-                || pp == property.SPASSWORD && saleman.getPasswd() == null) {
+                || pp == property.SPASSWORD && saleman.getSPassword() == null) {
             return false;
         }
-        String newVal = pp == property.SNAME ? saleman.getSName() : saleman.getPasswd();
+        String newVal = pp == property.SNAME ? saleman.getSName() : saleman.getSPassword();
         Connection conn = DbUtil.getConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -113,6 +114,41 @@ public class SalemanDao {
         }
     }
 
+    public static boolean modify(Saleman sm) {
+        if (sm == null ||sm.getSName() == null || sm.getSPassword() == null) return false;
+        Connection conn = DbUtil.getConnection();
+        PreparedStatement pstmtQueryId = null;
+        PreparedStatement pstmtUpdate = null;
+        ResultSet idQuery = null;
+        int result = 0;
+        try {
+            pstmtQueryId = conn.prepareStatement("SELECT SID FROM SALESMAN WHERE SID=?;");
+            pstmtQueryId.setInt(1, sm.getSID());
+            idQuery = pstmtQueryId.executeQuery();
+            if (idQuery.next()) { // GID exists.
+                pstmtUpdate = conn.prepareStatement("UPDATE SALESMAN SET SNAME=?, SPASSWORD=? WHERE SID=?;");
+
+                pstmtUpdate.setString(1, sm.getSName());
+                pstmtUpdate.setString(2, sm.getSPassword());
+                pstmtUpdate.setInt(3, sm.getSID());
+                result = pstmtUpdate.executeUpdate();
+            }
+            return result != 0;
+
+        }
+        catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("销售员名已存在.");
+            return false;
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        finally {
+            DbUtil.close(null, pstmtQueryId, idQuery);
+            DbUtil.close(conn, pstmtUpdate, null);
+        }
+    }
     /**
      * 按照id将给定的saleman对象在数据库中的记录删除
      * @param saleman 给定的saleman对象
