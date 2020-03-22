@@ -37,7 +37,8 @@ public class FreeMarkerConfiguration implements ServletContextListener {
         // Specify the source where the template files come from. Here I set a
         // plain directory for it, but non-file-system sources are possible too:
         try {
-            cfg.setDirectoryForTemplateLoading(new File("/home/caid/mycode/javacode/myShoppingManagement/web/templates"));
+            System.out.println(System.getProperty("user.dir"));
+            cfg.setDirectoryForTemplateLoading(new File("/home/caid/mycode/javacode/myShoppingManagement/src/main/webapp/templates"));
         } catch (IOException e) {
             e.printStackTrace();
         }

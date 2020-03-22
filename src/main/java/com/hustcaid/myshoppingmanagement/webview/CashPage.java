@@ -58,6 +58,7 @@ public class CashPage extends HttpServlet {
         resp.setHeader("Content-type", "text/html; charset=utf-8");
         Configuration cfg = (Configuration) this.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
         Template template = cfg.getTemplate("cash.ftlh");
+        @SuppressWarnings("uncheck")
         Map map = new HashMap();
         map.put("saleman", sm.getSName());
 
