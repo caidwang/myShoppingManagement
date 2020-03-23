@@ -1,0 +1,42 @@
+GET http://localhost:8080/goodMaintain
+Accept: text/html
+
+###
+
+GET http://localhost:8080/goods/coco
+Accept: application/json
+
+###
+
+POST http://localhost:8080/goods/dido
+Accept: */*
+Cache-Control: no-cache
+
+{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}
+
+###
+
+PUT http://localhost:8080/goods/dido?gPrice=12
+Accept: application/json
+Cache-Control: no-cache
+
+###
+
+DELETE http://localhost:8080/goods/dido
+Accept: application/json
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/goods/?pattern=all
+Accept: application/json
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/goods/co?pattern=fuzzy
+Accept: application/json
+Cache-Control: no-cache
+
+###
+

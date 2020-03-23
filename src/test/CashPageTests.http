@@ -1,0 +1,25 @@
+POST http://localhost:8080/cash?session-id=dingding
+Accept: */*
+Cache-Control: no-cache
+
+[{"gid":2, "amount":1},{"gid":4, "amount":1}]
+
+<> 2020-03-21T071906.200.json
+
+###
+
+GET http://localhost:8080/cash?session-id=123&searchKey=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-21T062455.200.json
+
+###
+
+GET http://localhost:8080/cash?session-id=123&searchKey=c
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-21T062441.200.json
+
+###

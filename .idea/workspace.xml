@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="myShoppingManagement:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="Turn to Maven management.">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/maven_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/caid.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_67.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/myShoppingManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CashPageTest.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CashPageTests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/GoodPageTest.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/SaleManPageTest.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" value="5.22.0" />
+      </map>
+    </option>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myShoppingManagement" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yyaq3TsZ7TmXO6MwSoEl9jCUo4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583915540212" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/myShoppingManagement-1.0-SNAPSHOT" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.25516224" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.hustcaid.myshoppingmanagement.webview" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hustcaid.myshoppingManagement.view" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/files" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{'gid': 2, 'amount': 1}, {'gid': 4, 'amount': 1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{'gid': 2, 'amount': 1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{'gid': 2, 'amount': 1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{'gid': 2, 'amount': 1},{'gid': 4, 'amount': 1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/saleman/d" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="fuzzy" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/saleman/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="all" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/saleman/diorr" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/saleman/dior" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="SName" />
+                <option name="value" value="diorr" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/saleman/dior" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{'SID':2,'SPassword':'dido123','SName':'dior'}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/saleman/dingding" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/backend" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/html" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/saleman/dior" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="SName" />
+                <option name="value" value="diorr" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/goods/co" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="fuzzy" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/goods/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="all" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/goods/dido" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/goods/dido" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="12" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/goods/dido" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/goods/coco" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/goodMaintain" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/html" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/co" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="fuzzy" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pattern" />
+                <option name="value" value="all" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="12" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{'gId':2,'gName':'dido','gNum':4,'gPrice':15.0}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gId&quot;:2,&quot;gName&quot;:&quot;dido&quot;,&quot;gNum&quot;:4,&quot;gPrice&quot;:15.0}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/coco" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{\&quot;gId\&quot;=\&quot;0\&quot;, \&quot;gName\&quot;=\&quot;dido\&quot;,\&quot;gPrice\&quot;=\&quot;33.3\&quot;,\&quot;gNum\&quot;=\&quot;20\&quot;}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{\&quot;gId\&quot;=\&quot;0\&quot;, \&quot;gName\&quot;=\&quot;dido\&quot;,\&quot;gPrice\&quot;=\&quot;33.3\&quot;,\&quot;gNum\&quot;=\&quot;20\&quot;}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&quot;{&quot;gId&quot;=&quot;0&quot;, &quot;gName&quot;=&quot;dido&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}&quot;" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/dido" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gId&quot;=&quot;0&quot;, &quot;gName&quot;=&quot;dido&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/bibo" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gId&quot;=&quot;0&quot;, &quot;gName&quot;=&quot;bibo&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/bibo" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gId&quot;=0, &quot;gName&quot;=&quot;bibo&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/bibo" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gId&quot;=0, gName&quot;=&quot;bibo&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/bibo" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;gName&quot;=&quot;bibo&quot;,&quot;gPrice&quot;=&quot;33.3&quot;,&quot;gNum&quot;=&quot;20&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goodMaintain" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="15" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="gName" />
+                <option name="value" value="coco" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/goodMaintain" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="15" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="gName" />
+                <option name="value" value="coco" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/caca" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="15" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="gName" />
+                <option name="value" value="coco" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/caca" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="15" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/caca" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="1.11" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="gPrice" />
+                <option name="value" value="1.11" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/goods/2" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="searchKey" />
+                <option name="value" value="c" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="searchKey" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/cash" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[{&quot;gid&quot;:2, &quot;amount&quot;:1},{&quot;gid&quot;:4, &quot;amount&quot;:1}]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/cash" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="searchKey" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/cash" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="searchKey" />
+                <option name="value" value="c" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/cash" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="123" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.webPage">
+    <configuration name="myShoppingManagement" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="webPage" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="myShoppingManagement:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_myShoppingManagement" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="37605" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal=" package" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="myShoppingManagement:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.myShoppingManagement" />
+      <item itemvalue="Tomcat Server.webPage" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.128782" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="" />
+      <created>1579692490803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579692490803</updated>
+      <workItem from="1579692492095" duration="3575000" />
+      <workItem from="1580038562113" duration="4537000" />
+      <workItem from="1580219637264" duration="6490000" />
+      <workItem from="1581315138437" duration="598000" />
+      <workItem from="1581494430156" duration="487000" />
+      <workItem from="1582004318133" duration="41653000" />
+      <workItem from="1582122072417" duration="1939000" />
+      <workItem from="1582165661480" duration="15868000" />
+      <workItem from="1582444605538" duration="12000" />
+      <workItem from="1583409918985" duration="1858000" />
+      <workItem from="1583411827954" duration="2226000" />
+      <workItem from="1583647787698" duration="18663000" />
+      <workItem from="1583855304250" duration="318000" />
+      <workItem from="1583913727675" duration="1834000" />
+      <workItem from="1583917482726" duration="324000" />
+      <workItem from="1583917827225" duration="6632000" />
+      <workItem from="1583936662103" duration="9497000" />
+      <workItem from="1584154238955" duration="34000" />
+      <workItem from="1584162945032" duration="2427000" />
+      <workItem from="1584280121287" duration="11965000" />
+      <workItem from="1584776125493" duration="6223000" />
+      <workItem from="1584782425660" duration="456000" />
+      <workItem from="1584782911262" duration="275000" />
+      <workItem from="1584783214117" duration="25089000" />
+      <workItem from="1584868563353" duration="130000" />
+      <workItem from="1584869052042" duration="10424000" />
+      <workItem from="1584975501426" duration="688000" />
+    </task>
+    <task id="LOCAL-00001" summary="Transfer to servlet version">
+      <created>1584809753206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584809753206</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Transfer to servlet version">
+      <created>1584809857922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584809857922</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Complete The Servlet version.">
+      <created>1584810057298</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584810057298</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Complete The Servlet version.">
+      <created>1584810125230</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584810125230</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Turn to Maven management.">
+      <created>1584894207585</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584894207585</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Transfer to servlet version" />
+    <MESSAGE value="Complete The Servlet version." />
+    <MESSAGE value="Turn to Maven management." />
+    <option name="LAST_COMMIT_MESSAGE" value="Turn to Maven management." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="192" width="424" height="382" key="#BuildArtifactsBeforeRunChooser" timestamp="1584890544384">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="466" y="192" width="424" height="382" key="#BuildArtifactsBeforeRunChooser/0.0.1366.768@0.0.1366.768" timestamp="1584890544384" />
+    <state x="278" y="64" width="800" height="675" key="#HTTP_Proxy" timestamp="1583941210280">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="278" y="64" width="800" height="675" key="#HTTP_Proxy/0.0.1366.768@0.0.1366.768" timestamp="1583941210280" />
+    <state x="278" y="45" width="800" height="675" key="#Project_Structure" timestamp="1584975783013">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="278" y="45" width="800" height="675" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1584975783013" />
+    <state x="278" y="45" width="800" height="675" key="#SQL_Dialects" timestamp="1584282659056">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="278" y="45" width="800" height="675" key="#SQL_Dialects/0.0.1366.768@0.0.1366.768" timestamp="1584282659056" />
+    <state x="207" y="24" width="1012" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584975740896">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="207" y="24" width="1012" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1584975740896" />
+    <state x="441" y="189" width="474" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584164142854">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="441" y="189" width="474" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1584164142854" />
+    <state x="491" y="96" width="374" height="573" key="#com.intellij.ide.util.MemberChooser" timestamp="1584932716230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="491" y="96" width="374" height="573" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1584932716230" />
+    <state x="308" y="23" width="800" height="675" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584894066344">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="308" y="23" width="800" height="675" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.768@0.0.1366.768" timestamp="1584894066344" />
+    <state x="427" y="309" width="559" height="145" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1584890792757">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="427" y="309" width="559" height="145" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1366.768@0.0.1366.768" timestamp="1584890792757" />
+    <state x="507" y="292" width="409" height="182" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1584890838129">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="507" y="292" width="409" height="182" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1366.768@0.0.1366.768" timestamp="1584890838129" />
+    <state x="366" y="112" width="624" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583917509695">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="366" y="112" width="624" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1583917509695" />
+    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583929242875">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1583929242875" />
+    <state x="445" y="141" width="524" height="482" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1584786251046">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="445" y="141" width="524" height="482" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.768@0.0.1366.768" timestamp="1584786251046" />
+    <state x="413" y="240" width="510" height="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583928345535">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="240" width="510" height="286" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1583928345535" />
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2" timestamp="1584976155828">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1584976155828" />
+    <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl" timestamp="1584893844825">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1584893844825" />
+    <state width="1122" height="91" key="GridCell.Tab.0.bottom" timestamp="1584942022843">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584942022843" />
+    <state width="1122" height="91" key="GridCell.Tab.0.center" timestamp="1584942022842">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584942022842" />
+    <state width="1122" height="91" key="GridCell.Tab.0.left" timestamp="1584942022842">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584942022842" />
+    <state width="1122" height="91" key="GridCell.Tab.0.right" timestamp="1584942022843">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584942022843" />
+    <state width="1122" height="91" key="GridCell.Tab.1.bottom" timestamp="1584942022844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584942022844" />
+    <state width="1122" height="91" key="GridCell.Tab.1.center" timestamp="1584942022844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1584942022844" />
+    <state width="1122" height="91" key="GridCell.Tab.1.left" timestamp="1584942022844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1584942022844" />
+    <state width="1122" height="91" key="GridCell.Tab.1.right" timestamp="1584942022844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1584942022844" />
+    <state width="1122" height="91" key="GridCell.Tab.2.bottom" timestamp="1584942022844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.2.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584942022844" />
+    <state width="1122" height="91" key="GridCell.Tab.2.center" timestamp="1584942022843">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.2.center/0.0.1366.768@0.0.1366.768" timestamp="1584942022843" />
+    <state width="1122" height="91" key="GridCell.Tab.2.left" timestamp="1584942022843">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.2.left/0.0.1366.768@0.0.1366.768" timestamp="1584942022843" />
+    <state width="1122" height="91" key="GridCell.Tab.2.right" timestamp="1584942022843">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="91" key="GridCell.Tab.2.right/0.0.1366.768@0.0.1366.768" timestamp="1584942022843" />
+    <state width="1122" height="281" key="GridCell.Tab.3.bottom" timestamp="1584810411013">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="281" key="GridCell.Tab.3.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584810411013" />
+    <state width="1122" height="281" key="GridCell.Tab.3.center" timestamp="1584810411012">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="281" key="GridCell.Tab.3.center/0.0.1366.768@0.0.1366.768" timestamp="1584810411012" />
+    <state width="1122" height="281" key="GridCell.Tab.3.left" timestamp="1584810411012">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="281" key="GridCell.Tab.3.left/0.0.1366.768@0.0.1366.768" timestamp="1584810411012" />
+    <state width="1122" height="281" key="GridCell.Tab.3.right" timestamp="1584810411012">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1122" height="281" key="GridCell.Tab.3.right/0.0.1366.768@0.0.1366.768" timestamp="1584810411012" />
+    <state width="902" height="184" key="GridCell.Tab.4.bottom" timestamp="1583936749366">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="902" height="184" key="GridCell.Tab.4.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583936749366" />
+    <state width="902" height="184" key="GridCell.Tab.4.center" timestamp="1583936749365">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="902" height="184" key="GridCell.Tab.4.center/0.0.1366.768@0.0.1366.768" timestamp="1583936749365" />
+    <state width="902" height="184" key="GridCell.Tab.4.left" timestamp="1583936749365">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="902" height="184" key="GridCell.Tab.4.left/0.0.1366.768@0.0.1366.768" timestamp="1583936749365" />
+    <state width="902" height="184" key="GridCell.Tab.4.right" timestamp="1583936749366">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="902" height="184" key="GridCell.Tab.4.right/0.0.1366.768@0.0.1366.768" timestamp="1583936749366" />
+    <state width="213" height="499" key="HiddenNamespacesPopup" timestamp="1583941236810">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="213" height="499" key="HiddenNamespacesPopup/0.0.1366.768@0.0.1366.768" timestamp="1583941236810" />
+    <state x="266" y="121" width="824" height="524" key="IDE.errors.dialog" timestamp="1584783009558">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="266" y="121" width="824" height="524" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1584783009558" />
+    <state x="500" y="321" width="355" height="124" key="ReplaceDuplicatesPrompt" timestamp="1583939832576">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="500" y="321" width="355" height="124" key="ReplaceDuplicatesPrompt/0.0.1366.768@0.0.1366.768" timestamp="1583939832576" />
+    <state x="241" y="0" width="942" height="766" key="SettingsEditor" timestamp="1584893895241">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="241" y="0" width="942" height="766" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1584893895241" />
+    <state width="498" height="447" key="SwitcherDM" timestamp="1583940326647">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="498" height="447" key="SwitcherDM/0.0.1366.768@0.0.1366.768" timestamp="1583940326647" />
+    <state x="372" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1584869059296">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="372" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1584869059296" />
+    <state x="391" y="278" width="565" height="226" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584893835882">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="391" y="278" width="565" height="226" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.768@0.0.1366.768" timestamp="1584893835882" />
+    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584780654215">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1584780654215" />
+    <state x="416" y="152" width="524" height="470" key="extract.method.dialog" timestamp="1583939825405">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="416" y="152" width="524" height="470" key="extract.method.dialog/0.0.1366.768@0.0.1366.768" timestamp="1583939825405" />
+    <state width="491" height="381" key="javadoc.popup.new" timestamp="1584798090519">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="491" height="381" key="javadoc.popup.new/0.0.1366.768@0.0.1366.768" timestamp="1584798090519" />
+    <state x="78" y="82" width="1199" height="601" key="new project wizard" timestamp="1584868651248">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="78" y="82" width="1199" height="601" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1584868651248" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584164551939">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1584164551939" />
+  </component>
+</project>
