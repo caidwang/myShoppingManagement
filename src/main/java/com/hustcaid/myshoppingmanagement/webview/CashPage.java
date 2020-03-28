@@ -1,7 +1,7 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
 import com.alibaba.fastjson.JSON;
-import com.hustcaid.myshoppingmanagement.dao.SalemanDao;
+import com.hustcaid.myshoppingmanagement.dao.ISalemanDao;
 import com.hustcaid.myshoppingmanagement.entity.CartItem;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
@@ -36,7 +36,7 @@ import java.util.Map;
 @WebServlet("/cash")
 public class CashPage extends AbstractPage {
     @Autowired
-    private SalemanDao salemanDao;
+    private ISalemanDao salemanDao;
     @Autowired
     private GoodSaleService goodSaleService;
 
@@ -68,8 +68,7 @@ public class CashPage extends AbstractPage {
 
         resp.setHeader("Content-type", "text/html; charset=utf-8");
         Template template = cfg.getTemplate("cash.ftlh");
-        @SuppressWarnings("uncheck")
-        Map map = new HashMap();
+        Map<String, Object> map = new HashMap<>();
         map.put("saleman", sm.getSName());
 
         try {
@@ -96,7 +95,13 @@ public class CashPage extends AbstractPage {
         }
         List<CartItem> cartItems = JSON.parseArray(sb.toString(), CartItem.class);
         List<GoodSale> goodSales = Util.convertCartItem2GoodSale(cartItems, sm, LocalDate.now());
-        if (goodSaleService.transaction(goodSales)) {
+        boolean success = false;
+        try {
+            success = goodSaleService.transaction(goodSales);
+        } catch (RuntimeException e) {
+
+        }
+        if (success) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {

@@ -1,6 +1,6 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
-import com.hustcaid.myshoppingmanagement.dao.GoodSaleDao;
+import com.hustcaid.myshoppingmanagement.dao.IGoodSaleDao;
 import com.hustcaid.myshoppingmanagement.entity.GoodSaleCollection;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -28,7 +28,7 @@ import java.util.Map;
 @WebServlet("/goodsales")
 public class SalesPage extends AbstractPage {
     @Autowired
-    private GoodSaleDao goodSaleDao;
+    private IGoodSaleDao IGoodSaleDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -36,7 +36,7 @@ public class SalesPage extends AbstractPage {
         Configuration cfg = ((FreeMarkerConfigurer) applicationContext.getBean("freemarkerConfig")).getConfiguration();
         resp.setContentType("text/html; charset=utf-8");
         Template template = cfg.getTemplate("sales.ftlh");
-        List<GoodSaleCollection> goodSaleCollections = goodSaleDao.getByDate(LocalDate.now());
+        List<GoodSaleCollection> goodSaleCollections = IGoodSaleDao.getByDate(LocalDate.now());
         try {
             Map<String, Object> map = new HashMap<>();
             map.put("goodsaleColletions", goodSaleCollections);

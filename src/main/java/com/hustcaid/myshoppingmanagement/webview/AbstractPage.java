@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
  *  @date 2020/3/28   
  *
  ******************************************************************************/
-public class AbstractPage extends HttpServlet {
+public abstract class AbstractPage extends HttpServlet {
     /**
      * 通过重写servlet的init方法实现在servlet中注入bean
      *

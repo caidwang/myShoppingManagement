@@ -25,10 +25,11 @@ import java.util.Map;
  ******************************************************************************/
 @Slf4j
 @Repository
-public class GoodSaleDao {
+public class GoodSaleDao implements IGoodSaleDao {
     @Autowired
     private JdbcTemplate jdbc;
 
+    @Override
     public boolean addGoodSale(GoodSale goodSale) {
         SimpleJdbcInsert gsInsert = new SimpleJdbcInsert(jdbc).withTableName("GSALES").usingGeneratedKeyColumns("GSID");
         Map<String, Object> map = new HashMap<String, Object>() {{
@@ -53,6 +54,7 @@ public class GoodSaleDao {
      * @param date 待查询的销售日期
      * @return GoodSale的列表, 当date非法或没有销售记录时, 列表为空.
      */
+    @Override
     public List<GoodSaleCollection> getByDate(LocalDate date) {
         List<GoodSaleCollection> list;
         list = jdbc.query("SELECT GNAME, GPRICE, GNUM, TOTAL FROM SALELIST WHERE SDATE = ?;", (resultSet, i) -> {

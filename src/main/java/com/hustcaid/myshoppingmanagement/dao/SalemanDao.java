@@ -33,7 +33,7 @@ import java.util.Map;
 
 @Slf4j
 @Repository
-public class SalemanDao {
+public class SalemanDao implements ISalemanDao {
     private final JdbcTemplate jdbc;
     private SimpleJdbcInsert salemanInsert;
 
@@ -49,6 +49,7 @@ public class SalemanDao {
      * @param sm 待添加Saleman对象, 要求sName和sPassword属性不为空
      * @return 如果操作成功, 返回true,并设置sm对象的ID, 否则返回false.
      */
+    @Override
     public boolean add(Saleman sm) {
         if (sm == null || sm.getSName() == null || sm.getSPassword() == null) {
             log.info("add Saleman fail " + sm);
@@ -74,6 +75,7 @@ public class SalemanDao {
      * @param sm 已经修改好的saleman对象
      * @return 如果操作成功返回true, 否则返回false
      */
+    @Override
     public boolean modify(Saleman sm) {
         if (sm == null || sm.getSName() == null || sm.getSPassword() == null) return false;
         int ok = jdbc.update("UPDATE SALESMAN SET SNAME=?, SPASSWORD=? WHERE SID=?;",
@@ -87,6 +89,7 @@ public class SalemanDao {
      * @param saleman 给定的saleman对象
      * @return 如果操作成功返回true, 否则返回false
      */
+    @Override
     public boolean delete(Saleman saleman) {
         if (saleman == null) {
             return false;
@@ -108,6 +111,7 @@ public class SalemanDao {
      * @param sName
      * @return
      */
+    @Override
     public Saleman getBySName(String sName) {
         if (sName == null) {
             return null;
@@ -120,6 +124,7 @@ public class SalemanDao {
      *
      * @return 所有的售货员列表
      */
+    @Override
     public List<Saleman> getAll() {
         return jdbc.query("select SID, SNAME, SPASSWORD FROM SALESMAN;", new SaleManMapper());
     }
@@ -130,6 +135,7 @@ public class SalemanDao {
      * @param keyWord 模糊搜索键值, 形如"张%"
      * @return
      */
+    @Override
     public List<Saleman> fuzzyGet(String keyWord) {
         if (keyWord == null) return new ArrayList<Saleman>();
         return jdbc.query("SELECT * FROM SALESMAN WHERE SNAME LIKE ?;", new SaleManMapper(), keyWord);

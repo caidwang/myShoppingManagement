@@ -2,7 +2,7 @@ package com.hustcaid.myshoppingmanagement.webview;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
-import com.hustcaid.myshoppingmanagement.dao.GoodsDao;
+import com.hustcaid.myshoppingmanagement.dao.IGoodsDao;
 import com.hustcaid.myshoppingmanagement.entity.Good;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,7 +26,7 @@ public class GoodAPI extends AbstractPage {
 
     public static final String PARAM_PATTERN = "pattern";
     @Autowired
-    private GoodsDao goodsDao;
+    private IGoodsDao goodsDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

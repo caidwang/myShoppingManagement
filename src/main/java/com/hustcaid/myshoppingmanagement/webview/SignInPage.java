@@ -1,6 +1,6 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
-import com.hustcaid.myshoppingmanagement.dao.SalemanDao;
+import com.hustcaid.myshoppingmanagement.dao.ISalemanDao;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -28,7 +28,7 @@ public class SignInPage extends AbstractPage {
     private static final String PARAM_SESSION_ID = "session-id";
 
     @Autowired
-    private SalemanDao salemanDao;
+    private ISalemanDao salemanDao;
 
     /**
      * 如果未登录, 返回登录页面, 否则使用已登录的session-id跳转到/cash页面

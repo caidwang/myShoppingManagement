@@ -27,7 +27,7 @@ import java.util.Objects;
  ******************************************************************************/
 @Slf4j
 @Repository
-public class GoodsDao {
+public class GoodsDao implements IGoodsDao {
     @Autowired
     private JdbcTemplate jdbc;
 
@@ -39,6 +39,7 @@ public class GoodsDao {
      * @param good
      * @return 当执行成功时返回true, 否则返回false
      */
+    @Override
     public boolean add(Good good) {
         if (good == null || good.getGName() == null || good.getGPrice() == 0 || good.getGNum() < 0) {
             log.info("add Good fail." + good);
@@ -70,6 +71,7 @@ public class GoodsDao {
      * @param good, 待修改的商品对象, 其中属性修改
      * @return 如果修改成功返回@code{true}, 修改失败返回@code{false}
      */
+    @Override
     public boolean modify(Good good) {
         if (good == null || good.getGPrice() < 0 || good.getGNum() < 0) {
             log.info("add Good fail." + good);
@@ -80,13 +82,22 @@ public class GoodsDao {
         return ok == 1;
     }
 
+    @Override
     public boolean consume(Good good, int num) {
         if (good == null) return false;
         return consume(good.getGId(), num);
     }
 
+    @Override
     public boolean consume(int gid, int num) {
-        int ok = jdbc.update("UPDATE GOODS SET GNUM = GNUM - ? WHERE GID= ? AND GNUM >= ?;",
+        int ok;
+//        try {
+
+//        } catch (DataAccessException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+        ok = jdbc.update("UPDATE GOODS SET GNUM = GNUM - ? WHERE GID= ? AND GNUM >= ?;",
                 num, gid, num);
         return ok == 1;
     }
@@ -97,6 +108,7 @@ public class GoodsDao {
      * @param good 待删除的商品对象,为null时方法返回false
      * @return 如果对象存在并且被删除返回true, 否则返回false
      */
+    @Override
     public boolean delete(Good good) {
         int ok = jdbc.update("DELETE FROM GOODS where GID = ?;", good.getGId());
         log.info("delete Good " + good + (ok == 1 ? " ok" : " fail"));
@@ -109,6 +121,7 @@ public class GoodsDao {
      * @param GName 待查询的名称
      * @return 如果存在返回商品Good对象, 不存在时返回@code{null}
      */
+    @Override
     public Good getByGName(String GName) {
         if (GName == null) {
             return null;
@@ -121,6 +134,7 @@ public class GoodsDao {
      *
      * @return 如果返回失败, 列表为空
      */
+    @Override
     public List<Good> getAll() {
         return jdbc.query("SELECT GID, GNAME, GPRICE, GNUM FROM GOODS;", new GoodMapper());
     }
@@ -131,6 +145,7 @@ public class GoodsDao {
      * @param nameSeg 通配符关键字, 形如"巧克力%", 为null时返回空list
      * @return 返回包含结果的list
      */
+    @Override
     public List<Good> fuzzyGet(String nameSeg) {
         List<Good> list;
         list = jdbc.query("SELECT * FROM GOODS WHERE GNAME LIKE ?;", new GoodMapper(), nameSeg);

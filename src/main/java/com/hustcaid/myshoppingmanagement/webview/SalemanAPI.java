@@ -1,7 +1,7 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
 import com.alibaba.fastjson.JSON;
-import com.hustcaid.myshoppingmanagement.dao.SalemanDao;
+import com.hustcaid.myshoppingmanagement.dao.ISalemanDao;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,7 +25,7 @@ public class SalemanAPI extends AbstractPage {
     private static final String PARAM_PATTERN = "pattern";
 
     @Autowired
-    private SalemanDao salemanDao;
+    private ISalemanDao salemanDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

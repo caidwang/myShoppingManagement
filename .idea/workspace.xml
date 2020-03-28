@@ -10,8 +10,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="Refactor using Spring-framework">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
@@ -42,36 +41,25 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_4_RELEASE.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/service/GoodSaleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/service/GoodSaleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/AbstractPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/aspect/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/IGoodSaleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/IGoodsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/ISalemanDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hustcaid/myshoppingmanagement/dao/GoodsDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myShoppingManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myShoppingManagement.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/GoodSaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/GoodSaleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/GoodsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/SalemanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/dao/SalemanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/db/DbUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/GoodSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/GoodSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Saleman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Saleman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/util/FreeMarkerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/service/GoodSaleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/service/GoodSaleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/AbstractPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/CashPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/CashPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/CashPageTest.http" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CashPageTest.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +95,19 @@
         <item name="jdbc" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -117,9 +118,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JUnit5 Test Class" />
         <option value="HTTP Request" />
         <option value="spring-beans.schema" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -144,8 +146,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" value="" />
   </component>
   <component name="MavenImportPreferences">
@@ -201,8 +203,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.hustcaid.myshoppingmanagement.dao" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.hustcaid.myshoppingmanagement.dao" />
       <recent name="com.hustcaid.myshoppingmanagement.webview" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -210,9 +219,6 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.hustcaid.myshoppingmanagement.service" />
@@ -270,6 +276,31 @@
           <option name="parametersEnabled" value="true" />
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="[&#10;  {&#10;    'gid': 2,&#10;    'amount': 1&#10;  },&#10;  {&#10;    'gid': 4,&#10;    'amount': 1&#10;  }&#10;]" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/cash" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="session-id" />
+                <option name="value" value="dingding" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="[&#10;  {&#10;    'gid': 2,&#10;    'amount': 50&#10;  },&#10;  {&#10;    'gid': 4,&#10;    'amount': 1&#10;  }&#10;]" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -1449,11 +1480,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.webPage">
+  <component name="RunManager" selected="HTTP Request.CashPageTest#3">
     <configuration name="CashPageTest#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="CashPageTest#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="CashPageTest#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="myShoppingManagement" type="MavenRunConfiguration" factoryName="Maven">
@@ -1559,11 +1593,13 @@
       <item itemvalue="Tomcat Server.webPage" />
       <item itemvalue="HTTP Request.CashPageTest#2" />
       <item itemvalue="HTTP Request.CashPageTest#3" />
+      <item itemvalue="HTTP Request.CashPageTest#4" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.CashPageTest#3" />
         <item itemvalue="HTTP Request.CashPageTest#2" />
+        <item itemvalue="HTTP Request.CashPageTest#4" />
       </list>
     </recent_temporary>
   </component>
@@ -1581,7 +1617,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -1630,7 +1666,7 @@
       <workItem from="1585140996236" duration="11172000" />
       <workItem from="1585191029539" duration="752000" />
       <workItem from="1585323588329" duration="11091000" />
-      <workItem from="1585362234886" duration="6989000" />
+      <workItem from="1585362234886" duration="11762000" />
     </task>
     <task id="LOCAL-00001" summary="Transfer to servlet version">
       <created>1584809753206</created>
@@ -1681,7 +1717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584976244465</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor using Spring-framework">
+      <created>1585375324612</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585375324612</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1702,11 +1745,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Transfer to servlet version" />
     <MESSAGE value="Complete The Servlet version." />
     <MESSAGE value="Turn to Maven management." />
-    <option name="LAST_COMMIT_MESSAGE" value="Turn to Maven management." />
+    <MESSAGE value="Refactor using Spring-framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor using Spring-framework" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1755,10 +1800,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="366" y="112" width="624" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1583917509695" />
-    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583929242875">
+    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585378548411">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1583929242875" />
+    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1585378548411" />
     <state x="416" y="133" width="524" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585329935890">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -1771,78 +1816,78 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="240" width="523" height="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1585150459857" />
-    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2" timestamp="1585375260830">
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2" timestamp="1585375324336">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1585375260830" />
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1585375324336" />
     <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl" timestamp="1584893844825">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1584893844825" />
-    <state width="1122" height="318" key="GridCell.Tab.0.bottom" timestamp="1585374518206">
+    <state width="1122" height="318" key="GridCell.Tab.0.bottom" timestamp="1585380027470">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585374518206" />
-    <state width="1122" height="318" key="GridCell.Tab.0.center" timestamp="1585374518206">
+    <state width="1122" height="318" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380027470" />
+    <state width="1122" height="318" key="GridCell.Tab.0.center" timestamp="1585380027468">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585374518206" />
-    <state width="1122" height="318" key="GridCell.Tab.0.left" timestamp="1585374518205">
+    <state width="1122" height="318" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585380027468" />
+    <state width="1122" height="318" key="GridCell.Tab.0.left" timestamp="1585380027468">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585374518205" />
-    <state width="1122" height="318" key="GridCell.Tab.0.right" timestamp="1585374518206">
+    <state width="1122" height="318" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585380027468" />
+    <state width="1122" height="318" key="GridCell.Tab.0.right" timestamp="1585380027469">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585374518206" />
-    <state width="1122" height="318" key="GridCell.Tab.1.bottom" timestamp="1585374518209">
+    <state width="1122" height="318" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585380027469" />
+    <state width="1122" height="318" key="GridCell.Tab.1.bottom" timestamp="1585380027473">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585374518209" />
-    <state width="1122" height="318" key="GridCell.Tab.1.center" timestamp="1585374518208">
+    <state width="1122" height="318" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380027473" />
+    <state width="1122" height="318" key="GridCell.Tab.1.center" timestamp="1585380027473">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1585374518208" />
-    <state width="1122" height="318" key="GridCell.Tab.1.left" timestamp="1585374518208">
+    <state width="1122" height="318" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1585380027473" />
+    <state width="1122" height="318" key="GridCell.Tab.1.left" timestamp="1585380027472">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1585374518208" />
-    <state width="1122" height="318" key="GridCell.Tab.1.right" timestamp="1585374518208">
+    <state width="1122" height="318" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1585380027472" />
+    <state width="1122" height="318" key="GridCell.Tab.1.right" timestamp="1585380027473">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1585374518208" />
-    <state width="1122" height="318" key="GridCell.Tab.2.bottom" timestamp="1585374518207">
+    <state width="1122" height="318" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1585380027473" />
+    <state width="1122" height="318" key="GridCell.Tab.2.bottom" timestamp="1585380027472">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585374518207" />
-    <state width="1122" height="318" key="GridCell.Tab.2.center" timestamp="1585374518207">
+    <state width="1122" height="318" key="GridCell.Tab.2.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380027472" />
+    <state width="1122" height="318" key="GridCell.Tab.2.center" timestamp="1585380027471">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.center/0.0.1366.768@0.0.1366.768" timestamp="1585374518207" />
-    <state width="1122" height="318" key="GridCell.Tab.2.left" timestamp="1585374518206">
+    <state width="1122" height="318" key="GridCell.Tab.2.center/0.0.1366.768@0.0.1366.768" timestamp="1585380027471" />
+    <state width="1122" height="318" key="GridCell.Tab.2.left" timestamp="1585380027470">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.left/0.0.1366.768@0.0.1366.768" timestamp="1585374518206" />
-    <state width="1122" height="318" key="GridCell.Tab.2.right" timestamp="1585374518207">
+    <state width="1122" height="318" key="GridCell.Tab.2.left/0.0.1366.768@0.0.1366.768" timestamp="1585380027470" />
+    <state width="1122" height="318" key="GridCell.Tab.2.right" timestamp="1585380027471">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.right/0.0.1366.768@0.0.1366.768" timestamp="1585374518207" />
-    <state width="1122" height="321" key="GridCell.Tab.3.bottom" timestamp="1585363336220">
+    <state width="1122" height="318" key="GridCell.Tab.2.right/0.0.1366.768@0.0.1366.768" timestamp="1585380027471" />
+    <state width="1122" height="318" key="GridCell.Tab.3.bottom" timestamp="1585379745907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="321" key="GridCell.Tab.3.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585363336220" />
-    <state width="1122" height="321" key="GridCell.Tab.3.center" timestamp="1585363336219">
+    <state width="1122" height="318" key="GridCell.Tab.3.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585379745907" />
+    <state width="1122" height="318" key="GridCell.Tab.3.center" timestamp="1585379745906">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="321" key="GridCell.Tab.3.center/0.0.1366.768@0.0.1366.768" timestamp="1585363336219" />
-    <state width="1122" height="321" key="GridCell.Tab.3.left" timestamp="1585363336219">
+    <state width="1122" height="318" key="GridCell.Tab.3.center/0.0.1366.768@0.0.1366.768" timestamp="1585379745906" />
+    <state width="1122" height="318" key="GridCell.Tab.3.left" timestamp="1585379745906">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="321" key="GridCell.Tab.3.left/0.0.1366.768@0.0.1366.768" timestamp="1585363336219" />
-    <state width="1122" height="321" key="GridCell.Tab.3.right" timestamp="1585363336219">
+    <state width="1122" height="318" key="GridCell.Tab.3.left/0.0.1366.768@0.0.1366.768" timestamp="1585379745906" />
+    <state width="1122" height="318" key="GridCell.Tab.3.right" timestamp="1585379745907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="321" key="GridCell.Tab.3.right/0.0.1366.768@0.0.1366.768" timestamp="1585363336219" />
+    <state width="1122" height="318" key="GridCell.Tab.3.right/0.0.1366.768@0.0.1366.768" timestamp="1585379745907" />
     <state width="902" height="184" key="GridCell.Tab.4.bottom" timestamp="1583936749366">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -1903,10 +1948,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="289" y="77" width="845" height="610" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1366.768@0.0.1366.768" timestamp="1585327039769" />
-    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584780654215">
+    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585375607138">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1584780654215" />
+    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1585375607138" />
     <state x="416" y="152" width="524" height="470" key="extract.method.dialog" timestamp="1583939825405">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -1931,16 +1976,5 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="338" y="68" width="679" height="630" key="spring file set editor/0.0.1366.768@0.0.1366.768" timestamp="1585323809599" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/CashPage.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
