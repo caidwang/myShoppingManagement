@@ -1,6 +1,626 @@
 POST http://localhost:8080/cash?session-id=dingding
 Content-Type: application/json
 
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T031922.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T031605.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T031401.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T031006.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T030829.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T030655.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T030535.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T030417.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T025109.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T025058.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T024517.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T023210.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T021547.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T021357.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 50
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T021118.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T014645.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T014334.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T012609.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T011220.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T110813.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T110704.200.json
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T110355.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T110012.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T105649.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T104813.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T104531.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T104342.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T104257.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T104037.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 4,
+    'amount': 1
+  }
+]
+
+<> 2020-03-28T103513.500.html
+
+###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
 [{'gid': 2, 'amount': 1}, {'gid': 4, 'amount': 1}]
 
 <> 2020-03-22T125307.200.json
@@ -119,294 +739,6 @@ Accept: application/json
 Cache-Control: no-cache
 
 <> 2020-03-22T124251.400.json
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124153.400.json
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124102.400.json
-
-###
-
-GET http://localhost:8080/saleman/d?pattern=fuzzy
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124004-1.200.json
-
-###
-
-GET http://localhost:8080/saleman/?pattern=all
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124004.200.json
-
-###
-
-DELETE http://localhost:8080/saleman/diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124004-2.400.json
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T124004-1.400.json
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T124004.400.json
-
-###
-
-GET http://localhost:8080/saleman/dingding
-Accept: application/json
-
-<> 2020-03-22T124000.200.json
-
-###
-
-GET http://localhost:8080/backend
-Accept: text/html
-
-<> 2020-03-22T124000.200.html
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123923.200.json
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123905.400.json
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123456.400.json
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123407.400.json
-
-###
-
-GET http://localhost:8080/saleman/d?pattern=fuzzy
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123124-2.200.json
-
-###
-
-GET http://localhost:8080/saleman/?pattern=all
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123124-1.200.json
-
-###
-
-DELETE http://localhost:8080/saleman/diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123124-2.400.json
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123124-1.400.json
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123124.400.json
-
-###
-
-GET http://localhost:8080/saleman/dingding
-Accept: application/json
-
-<> 2020-03-22T123124.200.json
-
-###
-
-GET http://localhost:8080/backend
-Accept: text/html
-
-<> 2020-03-22T123124.200.html
-
-###
-
-GET http://localhost:8080/saleman/d?pattern=fuzzy
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123021-4.200.html
-
-###
-
-GET http://localhost:8080/saleman/?pattern=all
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123021-3.200.html
-
-###
-
-DELETE http://localhost:8080/saleman/diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123021-1.405.html
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T123021.405.html
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T123021-2.200.html
-
-###
-
-GET http://localhost:8080/saleman/dingding
-Accept: application/json
-
-<> 2020-03-22T123021-1.200.html
-
-###
-
-GET http://localhost:8080/backend
-Accept: text/html
-
-<> 2020-03-22T123021.200.html
-
-###
-
-GET http://localhost:8080/saleman/d?pattern=fuzzy
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T122826-4.200.html
-
-###
-
-GET http://localhost:8080/saleman/?pattern=all
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T122826-3.200.html
-
-###
-
-DELETE http://localhost:8080/saleman/diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T122826-1.405.html
-
-###
-
-PUT http://localhost:8080/saleman/dior?SName=diorr
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T122826.405.html
-
-###
-
-POST http://localhost:8080/saleman/dior
-Accept: application/json
-Cache-Control: no-cache
-
-{'SID':2,'SPassword':'dido123','SName':'dior'}
-
-<> 2020-03-22T122826-2.200.html
-
-###
-
-GET http://localhost:8080/saleman/dingding
-Accept: application/json
-
-<> 2020-03-22T122826-1.200.html
-
-###
-
-GET http://localhost:8080/backend
-Accept: text/html
-
-<> 2020-03-22T122826.200.html
-
-###
-
-GET http://localhost:8080/goods/co?pattern=fuzzy
-Accept: application/json
-Cache-Control: no-cache
-
-<> 2020-03-22T122035-4.200.json
 
 ###
 
