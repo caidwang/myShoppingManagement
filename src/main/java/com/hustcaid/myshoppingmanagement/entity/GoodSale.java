@@ -1,5 +1,8 @@
 package com.hustcaid.myshoppingmanagement.entity;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
@@ -10,7 +13,8 @@ import java.time.LocalDate;
  *  Description:    
  *
  ******************************************************************************/
-public class GoodSale {
+@Data
+public class GoodSale implements Serializable {
     private int GSID;
     private int GID;
     private int SID;
@@ -32,43 +36,14 @@ public class GoodSale {
         this.date = date;
     }
 
-    public int getGSID() {
-        return GSID;
-    }
-
-    public void setGSID(int GSID) {
-        this.GSID = GSID;
-    }
-
-    public int getGID() {
-        return GID;
-    }
-
-    public void setGID(int GID) {
-        this.GID = GID;
-    }
-
-    public int getSID() {
-        return SID;
-    }
-
-    public void setSID(int SID) {
-        this.SID = SID;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public int getNumToSale() {
-        return numToSale;
-    }
-
-    public void setNumToSale(int numToSale) {
-        this.numToSale = numToSale;
+    @Override
+    public String toString() {
+        return "GoodSale{" +
+                "GSID=" + GSID +
+                ", GID=" + GID +
+                ", SID=" + SID +
+                ", date=" + date +
+                ", numToSale=" + numToSale +
+                '}';
     }
 }

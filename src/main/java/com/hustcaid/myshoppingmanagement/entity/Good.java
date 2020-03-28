@@ -1,5 +1,7 @@
 package com.hustcaid.myshoppingmanagement.entity;
 
+import lombok.Data;
+
 /******************************************************************************
  *  Compilation:  
  *  Execution:    
@@ -7,6 +9,7 @@ package com.hustcaid.myshoppingmanagement.entity;
  *  Description:    
  *
  ******************************************************************************/
+@Data
 public class Good {
     private int gId = -1;
     private String gName;
@@ -29,36 +32,9 @@ public class Good {
         this.gId = id;
     }
 
-    public int getGId() {
-        return gId;
-    }
-
-    public void setGId(int gId) {
-        this.gId = gId;
-    }
-
-    public String getGName() {
-        return gName;
-    }
-
-    public void setGName(String gName) {
-        this.gName = gName;
-    }
-
-    public double getGPrice() {
-        return gPrice;
-    }
-
-    public void setGPrice(double gPrice) {
-        this.gPrice = gPrice;
-    }
-
-    public int getGNum() {
-        return gNum;
-    }
-
-    public void setgNum(int gNum) {
-        this.gNum = gNum;
+    @Override
+    public String toString() {
+        return "Good[id:" + gId + " name:" + gName + " price:" + gPrice + " num:" + gNum + "]";
     }
 
 }

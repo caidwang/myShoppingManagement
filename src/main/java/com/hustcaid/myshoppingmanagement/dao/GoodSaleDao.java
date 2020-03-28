@@ -1,14 +1,20 @@
 package com.hustcaid.myshoppingmanagement.dao;
 
-import com.hustcaid.myshoppingmanagement.db.DbUtil;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.GoodSaleCollection;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
 
-import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /******************************************************************************
  *  Compilation:  
@@ -17,54 +23,28 @@ import java.util.List;
  *  Description:    
  *
  ******************************************************************************/
+@Slf4j
+@Repository
 public class GoodSaleDao {
-    public static boolean create(List<GoodSale> gsList) {
-        if (gsList == null || gsList.size() == 0) {
-            return false;
-        }
-        Connection conn = DbUtil.getConnection();
-        PreparedStatement pstmtG = null;
-        PreparedStatement pstmtGS = null;
-        ResultSet rs = null;
-        Iterator<GoodSale> it = gsList.iterator();
+    @Autowired
+    private JdbcTemplate jdbc;
+
+    public boolean addGoodSale(GoodSale goodSale) {
+        SimpleJdbcInsert gsInsert = new SimpleJdbcInsert(jdbc).withTableName("GSALES").usingGeneratedKeyColumns("GSID");
+        Map<String, Object> map = new HashMap<String, Object>() {{
+            put("GID", goodSale.getGID());
+            put("SID", goodSale.getSID());
+            put("SDATE", Date.valueOf(goodSale.getDate()));
+            put("SNUM", goodSale.getNumToSale());
+        }};
         try {
-            conn.setAutoCommit(false);
-            pstmtG = conn.prepareStatement("UPDATE GOODS SET GNUM = GNUM - ? WHERE GID= ? AND GNUM >= ?;");
-            pstmtGS = conn.prepareStatement("INSERT INTO GSALES (GID, SID, SDATE, SNUM) VALUES (?, ?, ?, ?);");
-            while (it.hasNext()) {
-                GoodSale gs = it.next();
-                pstmtG.setInt(1, gs.getNumToSale());
-                pstmtG.setInt(2, gs.getGID());
-                pstmtG.setInt(3, gs.getNumToSale());
-                pstmtGS.setInt(1, gs.getGID());
-                pstmtGS.setInt(2, gs.getSID());
-                pstmtGS.setDate(3, Date.valueOf(gs.getDate()));
-                pstmtGS.setInt(4, gs.getNumToSale());
-                int goodRecord = pstmtG.executeUpdate();
-                int goodSaleRecord = pstmtGS.executeUpdate();
-                if (goodRecord == 0 || goodSaleRecord == 0) {
-                    conn.rollback();
-                    return false;
-                }
-            }
-            conn.commit();
-            return true;
-        } catch (SQLException e) {
-            try {
-                conn.rollback();
-            } catch (SQLException ee) {
-                ee.printStackTrace();
-            }
+            int id = gsInsert.executeAndReturnKey(map).intValue();
+            goodSale.setGSID(id);
+        } catch (DataIntegrityViolationException e) {
+            log.warn("GoodSale record insert fail. Foreign key invalid." + goodSale);
             return false;
-        } finally {
-            try {
-                conn.setAutoCommit(true);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            DbUtil.close(null, pstmtG, rs);
-            DbUtil.close(conn, pstmtGS, null);
         }
+        return true;
     }
 
     /**
@@ -73,45 +53,16 @@ public class GoodSaleDao {
      * @param date 待查询的销售日期
      * @return GoodSale的列表, 当date非法或没有销售记录时, 列表为空.
      */
-    public static List<GoodSaleCollection> getByDate(LocalDate date) {
-        LinkedList<GoodSaleCollection> list = new LinkedList<>();
-        if (date == null) {
-            return list;
-        }
-        PreparedStatement pstmt = null;
-        Connection conn = DbUtil.getConnection();
-        ResultSet rs = null;
-        try {
-            pstmt = conn.prepareStatement("SELECT GNAME, GPRICE, GNUM, TOTAL FROM SALELIST WHERE SDATE = ?;");
-            pstmt.setDate(1, Date.valueOf(date));
-            rs = pstmt.executeQuery();
-            while (rs.next()) {
-                String name = rs.getString("GNAME");
-                double price = rs.getDouble("GPRICE");
-                int gnum = rs.getInt("GNUM");
-                int total = rs.getInt("TOTAL");
-                list.add(new GoodSaleCollection(name, price, gnum, total));
-            }
-            return list;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return list;
-        } finally {
-            DbUtil.close(conn, pstmt, rs);
-        }
-    }
-
-    public static class SaleLog {
-        public String name;
-        public double price;
-        public int num;
-        public int saled;
-
-        public SaleLog(String name, double price, int num, int saled) {
-            this.name = name;
-            this.price = price;
-            this.num = num;
-            this.saled = saled;
-        }
+    public List<GoodSaleCollection> getByDate(LocalDate date) {
+        List<GoodSaleCollection> list;
+        list = jdbc.query("SELECT GNAME, GPRICE, GNUM, TOTAL FROM SALELIST WHERE SDATE = ?;", (resultSet, i) -> {
+                    String name = resultSet.getString("GNAME");
+                    double price = resultSet.getDouble("GPRICE");
+                    int gnum = resultSet.getInt("GNUM");
+                    int total = resultSet.getInt("TOTAL");
+                    return new GoodSaleCollection(name, price, gnum, total);
+                },
+                Collections.singletonList(Date.valueOf(date)));
+        return list;
     }
 }

@@ -3,10 +3,10 @@ package com.hustcaid.myshoppingmanagement.webview;
 import com.alibaba.fastjson.JSON;
 import com.hustcaid.myshoppingmanagement.dao.SalemanDao;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
@@ -21,8 +21,11 @@ import java.util.List;
  *
  ******************************************************************************/
 @WebServlet("/saleman/*")
-public class SalemanAPI extends HttpServlet {
+public class SalemanAPI extends AbstractPage {
     private static final String PARAM_PATTERN = "pattern";
+
+    @Autowired
+    private SalemanDao salemanDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,13 +33,13 @@ public class SalemanAPI extends HttpServlet {
         String pattern = req.getParameter(PARAM_PATTERN);
         List<Saleman> salemans;
         if ("all".equals(pattern)) {
-            salemans = SalemanDao.getAll();
+            salemans = salemanDao.getAll();
         } else if ("fuzzy".equals(pattern)) {
-            salemans = SalemanDao.fuzzyGet(saleman + "%");
+            salemans = salemanDao.fuzzyGet(saleman + "%");
         } else {
             salemans = new ArrayList<>();
             Saleman item;
-            if ((item = SalemanDao.isExists(saleman)) != null) {
+            if ((item = salemanDao.getBySName(saleman)) != null) {
                 salemans.add(item);
             }
         }
@@ -65,7 +68,7 @@ public class SalemanAPI extends HttpServlet {
             cast = false;
         }
 
-        if (cast && SalemanDao.add(newSaleman)) {
+        if (cast && salemanDao.add(newSaleman)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {
@@ -77,7 +80,7 @@ public class SalemanAPI extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String sName = preProcess(req, resp);
-        Saleman modifiedSM = SalemanDao.isExists(sName);
+        Saleman modifiedSM = salemanDao.getBySName(sName);
         if (modifiedSM != null) {
             Enumeration<String> params = req.getParameterNames();
             boolean modified = false;
@@ -93,10 +96,9 @@ public class SalemanAPI extends HttpServlet {
                         modifiedSM.setSPassword(req.getParameter(param));
                         break;
                     default:
-                        ;
                 }
             }
-            if (modified && SalemanDao.modify(modifiedSM)) {
+            if (modified && salemanDao.modify(modifiedSM)) {
                 resp.setStatus(HttpServletResponse.SC_OK);
                 resp.getWriter().println("{\"status\":\"OK\"}");
                 return;
@@ -109,8 +111,8 @@ public class SalemanAPI extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String gName = preProcess(req, resp);
-        Saleman deletedSM = SalemanDao.isExists(gName);
-        if (SalemanDao.delete(deletedSM)) {
+        Saleman deletedSM = salemanDao.getBySName(gName);
+        if (salemanDao.delete(deletedSM)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {

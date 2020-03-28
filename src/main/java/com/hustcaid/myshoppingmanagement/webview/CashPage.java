@@ -1,20 +1,22 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
 import com.alibaba.fastjson.JSON;
-import com.hustcaid.myshoppingmanagement.dao.GoodSaleDao;
 import com.hustcaid.myshoppingmanagement.dao.SalemanDao;
 import com.hustcaid.myshoppingmanagement.entity.CartItem;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
-import com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration;
+import com.hustcaid.myshoppingmanagement.service.GoodSaleService;
 import com.hustcaid.myshoppingmanagement.util.Util;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
@@ -32,8 +34,15 @@ import java.util.Map;
  *
  ******************************************************************************/
 @WebServlet("/cash")
-public class CashPage extends HttpServlet {
-    private static final String PARAM_SEARCH_KEY = "searchKey";
+public class CashPage extends AbstractPage {
+    @Autowired
+    private SalemanDao salemanDao;
+    @Autowired
+    private GoodSaleService goodSaleService;
+
+
+    public CashPage() {
+    }
 
     /**
      * 如果没有登录, 返回登录界面
@@ -47,16 +56,17 @@ public class CashPage extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
+        Configuration cfg = ((FreeMarkerConfigurer) applicationContext.getBean("freemarkerConfig")).getConfiguration();
         String sessionId = req.getParameter("session-id");
         String searchKey;
         if (sessionId == null) {
             resp.sendRedirect("/signIn");
             return;
         }
-        Saleman sm = SalemanDao.isExists(sessionId);
+        Saleman sm = salemanDao.getBySName(sessionId);
 
         resp.setHeader("Content-type", "text/html; charset=utf-8");
-        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
         Template template = cfg.getTemplate("cash.ftlh");
         @SuppressWarnings("uncheck")
         Map map = new HashMap();
@@ -74,7 +84,7 @@ public class CashPage extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json; charset=utf-8");
         String sessionId = req.getParameter("session-id");
-        Saleman sm = SalemanDao.isExists(sessionId);
+        Saleman sm = salemanDao.getBySName(sessionId);
         if (sm == null) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "session-id invalid");
         }
@@ -86,7 +96,7 @@ public class CashPage extends HttpServlet {
         }
         List<CartItem> cartItems = JSON.parseArray(sb.toString(), CartItem.class);
         List<GoodSale> goodSales = Util.convertCartItem2GoodSale(cartItems, sm, LocalDate.now());
-        if (GoodSaleDao.create(goodSales)) {
+        if (goodSaleService.transaction(goodSales)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {

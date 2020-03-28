@@ -4,10 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.hustcaid.myshoppingmanagement.dao.GoodsDao;
 import com.hustcaid.myshoppingmanagement.entity.Good;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
@@ -22,9 +22,11 @@ import java.util.List;
  *
  ******************************************************************************/
 @WebServlet("/goods/*")
-public class GoodAPI extends HttpServlet {
+public class GoodAPI extends AbstractPage {
 
     public static final String PARAM_PATTERN = "pattern";
+    @Autowired
+    private GoodsDao goodsDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,13 +34,13 @@ public class GoodAPI extends HttpServlet {
         String pattern = req.getParameter(PARAM_PATTERN);
         List<Good> goods;
         if ("all".equals(pattern)) {
-            goods = GoodsDao.getAll();
+            goods = goodsDao.getAll();
         } else if ("fuzzy".equals(pattern)) {
-            goods = GoodsDao.fuzzyGet(gName + "%");
+            goods = goodsDao.fuzzyGet(gName + "%");
         } else {
             goods = new ArrayList<>();
             Good item;
-            if ((item = GoodsDao.isExists(gName)) != null) {
+            if ((item = goodsDao.getByGName(gName)) != null) {
                 goods.add(item);
             }
         }
@@ -67,7 +69,7 @@ public class GoodAPI extends HttpServlet {
             cast = false;
         }
 
-        if (cast && GoodsDao.add(newGood)) {
+        if (cast && goodsDao.add(newGood)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {
@@ -79,7 +81,7 @@ public class GoodAPI extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String gName = preProcess(req, resp);
-        Good modifiedGood = GoodsDao.isExists(gName);
+        Good modifiedGood = goodsDao.getByGName(gName);
         if (modifiedGood != null) {
             Enumeration<String> params = req.getParameterNames();
             boolean modified = false;
@@ -96,13 +98,12 @@ public class GoodAPI extends HttpServlet {
                         break;
                     case "gNum":
                         modified = true;
-                        modifiedGood.setgNum(Integer.parseInt(req.getParameter(param)));
+                        modifiedGood.setGNum(Integer.parseInt(req.getParameter(param)));
                         break;
                     default:
-                        ;
                 }
             }
-            if (modified && GoodsDao.modify(modifiedGood)) {
+            if (modified && goodsDao.modify(modifiedGood)) {
                 resp.setStatus(HttpServletResponse.SC_OK);
                 resp.getWriter().println("{\"status\":\"OK\"}");
                 return;
@@ -115,8 +116,8 @@ public class GoodAPI extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String gName = preProcess(req, resp);
-        Good deletedGood = GoodsDao.isExists(gName);
-        if (GoodsDao.delete(deletedGood)) {
+        Good deletedGood = goodsDao.getByGName(gName);
+        if (goodsDao.delete(deletedGood)) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("{\"status\":\"OK\"}");
         } else {

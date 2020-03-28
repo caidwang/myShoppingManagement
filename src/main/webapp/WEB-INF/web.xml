@@ -3,9 +3,17 @@
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--  导入spring  -->
     <listener>
-        <listener-class>com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration</listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    <!--  导入spring end -->
+
     <servlet>
         <servlet-name>ServletMainPage</servlet-name>
         <servlet-class>com.hustcaid.myshoppingmanagement.webview.MainPage</servlet-class>

@@ -1,5 +1,11 @@
 package com.hustcaid.myshoppingmanagement.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotNull;
+
 /******************************************************************************
  *  Compilation:  
  *  Execution:    
@@ -7,50 +13,19 @@ package com.hustcaid.myshoppingmanagement.entity;
  *  Description:    
  *
  ******************************************************************************/
-public final class Saleman {
+
+@AllArgsConstructor
+@NoArgsConstructor(force = true)
+@Data
+public class Saleman {
     private int SID;
+    @NotNull
     private String SPassword;
+    @NotNull
     private String SName;
 
-    public Saleman() {
-
-    }
-
-    public Saleman(String SName, String SPassword) {
-        this.SName = SName;
-        this.SPassword = SPassword;
-    }
-
-    public Saleman(int SID, String newName, String newPasswd) {
-        this.SID = SID;
-        this.SName = newName;
-        this.SPassword = newPasswd;
-    }
-
-    public int getSID() {
-        return SID;
-    }
-
-    public void setSID(int SID) {
-        if (SID < 0) {
-            throw new IllegalArgumentException("SID must > 0.");
-        }
-        this.SID = SID;
-    }
-
-    public String getSPassword() {
-        return SPassword;
-    }
-
-    public void setSPassword(String SPassword) {
-        this.SPassword = SPassword;
-    }
-
-    public String getSName() {
-        return SName;
-    }
-
-    public void setSName(String SName) {
-        this.SName = SName;
+    @Override
+    public String toString() {
+        return "SaleMan[id:" + SID + " Name:" + SName + "]";
     }
 }

@@ -1,9 +1,11 @@
 package com.hustcaid.myshoppingmanagement.webview;
 
-import com.hustcaid.myshoppingmanagement.util.FreeMarkerConfiguration;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,12 +22,12 @@ import java.io.IOException;
 
 @WebServlet("/goodMaintain")
 public class GoodsPage extends HttpServlet {
-    private static final String PARAM_SEARCH_KEY = "searchKey";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
         resp.setHeader("Content-type", "text/html; charset=utf-8");
-        Configuration cfg = (Configuration) this.getServletContext().getAttribute(FreeMarkerConfiguration.FREEMARKER_CONFIG_NAME);
+        Configuration cfg = ((FreeMarkerConfigurer) applicationContext.getBean("freemarkerConfig")).getConfiguration();
         Template template = cfg.getTemplate("goods.ftlh");
         try {
             template.process(null, resp.getWriter());

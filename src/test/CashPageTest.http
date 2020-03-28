@@ -25,3 +25,19 @@ Content-Type: application/json
 ]
 
 ###
+
+POST http://localhost:8080/cash?session-id=dingding
+Content-Type: application/json
+
+[
+  {
+    'gid': 2,
+    'amount': 1
+  },
+  {
+    'gid': 100,
+    'amount': 1
+  }
+]
+
+###
