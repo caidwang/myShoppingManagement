@@ -18,14 +18,14 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor(force = true)
 @Data
 public class Saleman {
-    private int SID;
+    private int sid;
     @NotNull
-    private String SPassword;
+    private String spassword;
     @NotNull
-    private String SName;
+    private String sname;
 
     @Override
     public String toString() {
-        return "SaleMan[id:" + SID + " Name:" + SName + "]";
+        return "SaleMan[id:" + sid + " Name:" + sname + "]";
     }
 }

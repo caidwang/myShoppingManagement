@@ -21,7 +21,7 @@
 
 <h1 style="text-align: center">收银平台</h1>
 <div class="container">
-    <div class="col-lg-4 col-lg-offset-4 text-center">收银员: <span id="saleman">${saleman}</span></div>
+    <div class="col-lg-4 col-lg-offset-4 text-center">收银员: <span id="saleman">${saleman.sname}</span></div>
     <div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px">
         <input class="col-lg-6 col-lg-offset-3" type="text" placeholder="请输入商品" id="searchKey">
         <button type="button" class="btn btn-default" aria-label="Left Align" id="search-good-button">
@@ -93,7 +93,7 @@
         searchData = null;
         $(".candidates").html("");
         $("#searchKey").val("");
-    };
+    }
 </script>
 </body>
 </html>

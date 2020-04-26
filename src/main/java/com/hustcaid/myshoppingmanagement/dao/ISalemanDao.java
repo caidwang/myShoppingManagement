@@ -1,6 +1,7 @@
 package com.hustcaid.myshoppingmanagement.dao;
 
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -10,15 +11,28 @@ import java.util.List;
  *
  ******************************************************************************/
 public interface ISalemanDao {
-    boolean add(Saleman sm);
+    @Insert("insert into SALESMAN(SNAME, SPASSWORD) values (#{sname}, #{spassword})")
+    @Options(useGeneratedKeys = true, keyProperty = "sid", keyColumn = "SID")
+    int add(Saleman sm);
 
-    boolean modify(Saleman sm);
+    @Update("UPDATE SALESMAN SET SNAME=#{sname}, SPASSWORD=#{spassword} WHERE SID=#{sid}")
+    int modify(Saleman sm);
 
-    boolean delete(Saleman saleman);
+    @Delete("DELETE FROM SALESMAN where SID = #{sid}")
+    int deleteById(Saleman saleman);
 
+    @Select("SELECT * FROM SALESMAN where SNAME = #{sname}")
+    @Results(id = "salemanMapper", value = {
+            @Result(property = "sid", column = "SID"),
+            @Result(property = "spassword", column = "SPASSWORD"),
+            @Result(property = "sname", column = "SNAME")
+    })
     Saleman getBySName(String sName);
 
+    @Select("select * from SALESMAN")
+    @ResultMap("salemanMapper")
     List<Saleman> getAll();
 
-    List<Saleman> fuzzyGet(String keyWord);
+    @Select("SELECT * FROM SALESMAN WHERE SNAME LIKE #{keyword}")
+    List<Saleman> getByFuzzyName(String keyWord);
 }

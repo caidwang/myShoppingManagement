@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!--
+        DispatcherServlet实现了ApplicationContext接口,
+        常见的一种ApplicationContext结构是层次结构的,
+        rootApplicationContext 也就是Listener定义的ApplicationContext是rootContext, 包含了Service, Repository这些bean
+        DispatcherServlet 是子context, 包含了Controller, viewResolver这些bean,
+        目的是service组件等的复用
+    -->
+    <context:component-scan base-package="com.hustcaid.myshoppingmanagement.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--配置使用freemarker作为解析器-->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <!-- 此变量值为pageContext.request, 页面使用方法：rc.contextPath -->
+        <!--        <property name="requestContextAttribute" value="rc" />-->
+    </bean>
+
+    <!--配置freemarker的模板路径-->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/templates/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="url_escaping_charset">UTF-8</prop>
+                <prop key="locale">UTF-8</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--静态资源不被前端解析器拦截-->
+    <mvc:resources mapping="/images/*" location="images/"/>
+
+    <!--开启mvc相关的注解支持, 比如RequestMapping等-->
+    <mvc:annotation-driven/>
+    <!--简单页面不编写Controller, 直接配置返回的string-->
+    <mvc:view-controller path="/" view-name="main"/>
+</beans>

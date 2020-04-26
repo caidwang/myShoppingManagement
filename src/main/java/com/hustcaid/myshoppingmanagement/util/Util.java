@@ -1,12 +1,12 @@
 package com.hustcaid.myshoppingmanagement.util;
 
 import com.hustcaid.myshoppingmanagement.entity.CartItem;
-import com.hustcaid.myshoppingmanagement.entity.Good;
 import com.hustcaid.myshoppingmanagement.entity.GoodSale;
 import com.hustcaid.myshoppingmanagement.entity.Saleman;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /******************************************************************************
  *  Compilation:  
@@ -22,7 +22,7 @@ public class Util {
         ArrayList<GoodSale> goodSales = new ArrayList<>();
         for (CartItem item : cartItemList) {
             goodSales.add(
-                    new GoodSale(0, item.getGid(), sm.getSID(), date, item.getAmount()));
+                    new GoodSale(0, item.getGid(), sm.getSid(), date, item.getAmount()));
         }
         return goodSales;
     }

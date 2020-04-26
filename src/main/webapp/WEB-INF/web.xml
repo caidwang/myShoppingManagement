@@ -7,7 +7,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
+    <!--xml配置文件的路径, 默认在WEB-INF下-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
@@ -15,12 +15,32 @@
     <!--  导入spring end -->
 
     <servlet>
-        <servlet-name>ServletMainPage</servlet-name>
-        <servlet-class>com.hustcaid.myshoppingmanagement.webview.MainPage</servlet-class>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springmvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
-        <servlet-name>ServletMainPage</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
+    <!--处理编码 防止中文乱码-->
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

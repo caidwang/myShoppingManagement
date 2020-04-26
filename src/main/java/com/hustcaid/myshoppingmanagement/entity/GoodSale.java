@@ -30,7 +30,7 @@ public class GoodSale implements Serializable {
     }
 
     public GoodSale(Saleman saleman, Good good, LocalDate date, int numToSale) {
-        SID = saleman.getSID();
+        SID = saleman.getSid();
         GID = good.getGId();
         this.numToSale = numToSale;
         this.date = date;

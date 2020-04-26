@@ -4,6 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
@@ -12,38 +13,38 @@
        https://www.springframework.org/schema/aop/spring-aop.xsd
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/jdbc
+       http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
 ">
     <!--导入jdbc.properties-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <context:property-placeholder location="jdbc.properties"/>
 
-
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/templates/"/>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="url_escaping_charset">UTF-8</prop>
+                <prop key="locale">UTF-8</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+            </props>
+        </property>
+    </bean>
     <!--组件扫描, 将service, repository, component这些纳入IoC管理, Controller交给SpringMVC-->
     <context:component-scan base-package="com.hustcaid.myshoppingmanagement">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
+    <!--aop基于注解配置-->
+    <aop:aspectj-autoproxy/>
 
-    <!--    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">-->
-    <!--        <property name="templateLoaderPath" value="/templates/"/>-->
-    <!--        <property name="freemarkerSettings">-->
-    <!--            <props>-->
-    <!--                <prop key="template_update_delay">0</prop>-->
-    <!--                <prop key="url_escaping_charset">UTF-8</prop>-->
-    <!--                <prop key="locale">UTF-8</prop>-->
-    <!--                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>-->
-    <!--                <prop key="date_format">yyyy-MM-dd</prop>-->
-    <!--                <prop key="number_format">#.##</prop>-->
-    <!--            </props>-->
-    <!--        </property>-->
-    <!--    </bean>-->
-
-    <!--mybatis配置, 1. 数据源-->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>
+    <!--mybatis配置, 1. 测试数据源-->
+    <jdbc:embedded-database id="dataSource" type="H2">
+        <jdbc:script location="classpath:testSchema.sql"/>
+        <jdbc:script location="classpath:data.sql"/>
+    </jdbc:embedded-database>
 
     <!--mybatis配置 2. SqlSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -59,9 +60,6 @@
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
-    <!--aop基于注解配置-->
-    <aop:aspectj-autoproxy/>
     <!--spring的事务机制的注解扫描-->
     <tx:annotation-driven transaction-manager="txManager"/>
 </beans>

@@ -1,6 +1,7 @@
 package com.hustcaid.myshoppingmanagement.dao;
 
 import com.hustcaid.myshoppingmanagement.entity.Good;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -10,19 +11,25 @@ import java.util.List;
  *
  ******************************************************************************/
 public interface IGoodsDao {
-    boolean add(Good good);
+    @Insert("INSERT INTO GOODS (GNAME, GPRICE, GNUM) VALUES (#{gName}, #{gPrice}, #{gNum})")
+    @Options(useGeneratedKeys = true, keyColumn = "GID", keyProperty = "gId")
+    int add(Good good);
 
-    boolean modify(Good good);
+    @Update("UPDATE GOODS SET GNAME=#{gName},GPRICE=#{gPrice},GNUM=#{gNum} WHERE GID= #{gId}")
+    int update(Good good);
 
-    boolean consume(Good good, int num);
+    @Update("UPDATE GOODS SET GNUM = GNUM - #{num} WHERE GID= #{gid} AND GNUM >= #{num}")
+    int consume(@Param("gid") int gid, @Param("num") int num);
 
-    boolean consume(int gid, int num);
+    @Delete("DELETE FROM GOODS where GID = #{gId}")
+    int delete(Good good);
 
-    boolean delete(Good good);
-
+    @Select("SELECT * FROM GOODS where GNAME = #{gName}")
     Good getByGName(String GName);
 
+    @Select("select * from GOODS")
     List<Good> getAll();
 
-    List<Good> fuzzyGet(String nameSeg);
+    @Select("SELECT * FROM GOODS where GNAME like #{nameSeg}")
+    List<Good> getByFuzzyName(String nameSeg);
 }

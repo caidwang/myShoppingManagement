@@ -40,6 +40,13 @@
                     <td>${entry.numPreserve}</td>
                     <td>${entry.numSaled}</td>
                 </tr>
+            <#else>
+                <tr>
+                    <td>空</td>
+                    <td>空</td>
+                    <td>空</td>
+                    <td>空</td>
+                </tr>
             </#list>
             </tbody>
         </table>

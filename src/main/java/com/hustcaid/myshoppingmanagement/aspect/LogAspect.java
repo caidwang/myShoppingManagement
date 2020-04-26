@@ -21,7 +21,7 @@ public class LogAspect {
 
     }
 
-    @Pointcut("execution(* com.hustcaid.myshoppingmanagement.webview.*.*(..))")
+    @Pointcut("execution(* com.hustcaid.myshoppingmanagement.controller.*.*(..))")
     public void visitPage() { // 不是bean 并不起作用
 
     }

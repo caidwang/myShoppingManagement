@@ -29,8 +29,9 @@ public class GoodSaleServiceImpl implements GoodSaleService {
         if (gsList == null || gsList.size() == 0) return false;
         boolean success = true;
         for (GoodSale gs : gsList) {
-            success = success && goodSaleDao.addGoodSale(gs);
-            success = success && goodsDao.consume(gs.getGID(), gs.getNumToSale());
+            success = success && (goodSaleDao.addGoodSale(gs) == 1);
+            success = success && (goodsDao.consume(gs.getGID(), gs.getNumToSale()) == 1);
+            // 注意Spring事务只在遇到RuntimeException时会回滚
             if (!success) {
                 throw new RuntimeException("transaction fail on " + gs);
             }
