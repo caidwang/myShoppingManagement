@@ -2,6 +2,9 @@ package com.hustcaid.myshoppingmanagement.entity;
 
 import lombok.Data;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 /******************************************************************************
  *  Compilation:  
  *  Execution:    
@@ -11,9 +14,13 @@ import lombok.Data;
  ******************************************************************************/
 @Data
 public class Good {
+
     private int gId = -1;
+    @NotNull
     private String gName;
+    @Min(0)
     private double gPrice;
+    @Min(1)
     private int gNum;
 
     public Good() {

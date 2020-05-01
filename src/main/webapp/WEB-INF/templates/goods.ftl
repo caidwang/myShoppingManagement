@@ -21,58 +21,48 @@
 
 <h1 style="text-align: center">商品管理</h1>
 <div class="container">
-
+    <div><a href="/">返回主页</a></div>
     <div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px">
-        <input class="col-lg-6 col-lg-offset-3" type="text" placeholder="请输入商品名" name="searchKey">
+        <input class="col-lg-6" type="text" placeholder="请输入商品名" name="searchKey">
         <button type="button" class="btn btn-default" aria-label="Left Align" id="search-good">
             <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align" id="add-good">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </button>
+        <a href="/good/submitGood">
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="add-good">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </a>
     </div>
     <div class="row col-md-8 col-md-offset-2" style="margin-top: 40px">
+        <#if msg?? >
+            <div class="alert alert-info" role="alert">${msg}</div>
+        </#if>
         <table class="table">
             <thead>
             <tr>
                 <th>商品名称</th>
                 <th>数量</th>
                 <th>单价</th>
-                <th>修改</th>
-                <th>删除</th>
+                <th>管理</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>巧克力</td>
-                <td>15</td>
-                <td>15.50</td>
-                <td>
-                    <button type="button" class="btn btn-warning" aria-label="Left Align" id="delete-good">
-                        修改
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger" aria-label="Left Align" id="delete-good">
-                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>豆豆</td>
-                <td>15</td>
-                <td>15.60</td>
-                <td>
-                    <button type="button" class="btn btn-warning" aria-label="Left Align" id="delete-good">
-                        修改
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-warning" aria-label="Left Align" id="delete-good">
-                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                    </button>
-                </td>
-            </tr>
+            <#list goods as good>
+                <tr>
+                    <td>${good.GName}</td>
+                    <td>${good.GNum}</td>
+                    <td>${good.GPrice}</td>
+                    <td>
+                        <button type="button" class="btn btn-warning" aria-label="Left Align" id="modify-${good.GName}">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger" aria-label="Left Align" id="delete-${good.GName}">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </#list>
+
             </tbody>
         </table>
     </div>
@@ -81,5 +71,22 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script>
+    $("#search-good").click(function () {
+        window.location.href = "/good?searchKey=" + $(" input[ name='searchKey' ] ").val();
+    });
+    $('button[id^=delete]').click(function () {
+        var name = $(this)[0].id.split("-")[1];
+        console.log(name);
+        var msg = confirm("确定删除商品:" + name + "?");
+        if (msg === true) {
+            window.location.href = "/good/delete?goodname=" + name;
+        }
+    });
+    $('button[id^=modify]').click(function () {
+        var name = $(this)[0].id.split("-")[1];
+        window.location.href = "/good/submitGood?goodname=" + name;
+    });
+</script>
 </body>
 </html>

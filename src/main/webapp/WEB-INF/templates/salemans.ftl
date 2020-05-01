@@ -28,20 +28,23 @@
         <button type="button" class="btn btn-default" aria-label="Left Align" id="search-saleman" autofocus="autofocus">
             <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align" id="add-saleman">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </button>
+        <a href="/backend/submitSaleMan">
+            <button type="button" class="btn btn-default" aria-label="Left Align" id="add-saleman">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </a>
     </div>
 
     <div class="row col-md-8 col-md-offset-2" style="margin-top: 40px">
         <#if msg?? >
-            <div class="alert alert-info" role="alert">${msg}</div></#if>
+            <div class="alert alert-info" role="alert">${msg}</div>
+        </#if>
         <table class="table">
             <thead>
             <tr>
                 <th>售货员姓名</th>
                 <th>密码</th>
-                <th>删除</th>
+                <th>管理</th>
             </tr>
             </thead>
             <tbody>
@@ -50,21 +53,24 @@
                     <td>${sm.sname}</td>
                     <td>${sm.spassword}</td>
                     <td>
+                        <button type="button" class="btn btn-default" aria-label="Left Align" id="modify-${sm.sname}">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </button>
                         <button type="button" class="btn btn-default" aria-label="Left Align" id="delete-${sm.sname}">
                             <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                         </button>
                     </td>
                 </tr>
             </#list>
-            <tr hidden="hidden" id="newsm-row">
-                <td><input type="text" placeholder="输入姓名" name="newsm-name"/></td>
-                <td><input type="text" placeholder="输入密码" name="newsm-password"/></td>
-                <td>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" id="realAddSaleMan">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </button>
-                </td>
-            </tr>
+            <#--            <tr hidden="hidden" id="newsm-row">-->
+            <#--                <td><input type="text" placeholder="输入姓名" name="newsm-name"/></td>-->
+            <#--                <td><input type="text" placeholder="输入密码" name="newsm-password"/></td>-->
+            <#--                <td>-->
+            <#--                    <button type="button" class="btn btn-default" aria-label="Left Align" id="realAddSaleMan">-->
+            <#--                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>-->
+            <#--                    </button>-->
+            <#--                </td>-->
+            <#--            </tr>-->
             </tbody>
         </table>
     </div>
@@ -85,8 +91,9 @@
             window.location.href = "/backend/delete?username=" + smId;
         }
     });
-    $("#add-saleman").click(function () {
-        $("#newsm-row").show();
+    $('button[id^=modify]').click(function () {
+        var smId = $(this)[0].id.split("-")[1];
+        window.location.href = "/backend/submitSaleMan?username=" + smId;
     });
     $("#realAddSaleMan").click(function () {
         var name = $("input[name='newsm-name']").val();

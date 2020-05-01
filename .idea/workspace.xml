@@ -6,45 +6,59 @@
   </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="myShoppingManagement:war exploded" />
+      <artifact name="myShoppingManagement:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="Refactor using Spring-framework">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+    <list default="true" id="513078a0-1d9a-4385-b3e8-6e0bc1e72da8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0_rc1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0_rc1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_4_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/SaleManValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/goodDetail.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/saleManDetails.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/myShoppingManagement_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_67.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myShoppingManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myShoppingManagement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/GoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/SaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/SaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/SaleManController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/controller/SaleManController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/entity/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/CashPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/CashPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/GoodAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/GoodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/GoodsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/SalemanAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalemanPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/SalemanPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SalesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/SalesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hustcaid/myshoppingmanagement/webview/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/webview/SignInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/goods.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/goods.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/salemans.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/salemans.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +71,9 @@
         <entry key="last-active-plugin-version" value="5.22.0" />
       </map>
     </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -92,6 +109,45 @@
         <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="GOODS: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="GSALES: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SALESMAN: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SMS: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SALELIST: view" type="d3266483:MysqlImplModel$View" />
+      </path>
     </expand>
     <select />
   </component>
@@ -104,8 +160,8 @@
         <option value="HTML File" />
         <option value="HTTP Request" />
         <option value="spring-beans.schema" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -124,6 +180,11 @@
         <option name="argument" value="--tags" />
         <option name="title" value="All" />
       </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -170,6 +231,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -178,7 +240,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/myShoppingManagement-1.0-SNAPSHOT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -191,13 +253,14 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.25516224" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.hustcaid.myshoppingmanagement.dao" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.hustcaid.myshoppingmanagement.service" />
       <recent name="com.hustcaid.myshoppingmanagement.dao" />
       <recent name="com.hustcaid.myshoppingmanagement.webview" />
     </key>
@@ -205,11 +268,15 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/files" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.hustcaid.myshoppingmanagement.service" />
@@ -1471,15 +1538,84 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.CashPageTest#3">
-    <configuration name="CashPageTest#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="2" runType="Run single request">
-      <method v="2" />
+  <component name="RunManager" selected="Tomcat Server.webPage">
+    <configuration name="GoodSaleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myShoppingManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hustcaid.myshoppingmanagement.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hustcaid.myshoppingmanagement.service" />
+      <option name="MAIN_CLASS_NAME" value="com.hustcaid.myshoppingmanagement.service.GoodSaleServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="CashPageTest#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="3" runType="Run single request">
-      <method v="2" />
+    <configuration name="GoodSaleServiceTest.transactionValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myShoppingManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hustcaid.myshoppingmanagement.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hustcaid.myshoppingmanagement.service" />
+      <option name="MAIN_CLASS_NAME" value="com.hustcaid.myshoppingmanagement.service.GoodSaleServiceTest" />
+      <option name="METHOD_NAME" value="transactionValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="CashPageTest#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/CashPageTest.http" index="4" runType="Run single request">
-      <method v="2" />
+    <configuration name="IGoodsDaoTest.consume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myShoppingManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hustcaid.myshoppingmanagement.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hustcaid.myshoppingmanagement.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hustcaid.myshoppingmanagement.dao.IGoodsDaoTest" />
+      <option name="METHOD_NAME" value="consume" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ISalemanDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myShoppingManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hustcaid.myshoppingmanagement.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hustcaid.myshoppingmanagement.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hustcaid.myshoppingmanagement.dao.ISalemanDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ISalemanDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="myShoppingManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hustcaid.myshoppingmanagement.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hustcaid.myshoppingmanagement.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hustcaid.myshoppingmanagement.dao.ISalemanDaoTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="myShoppingManagement" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -1494,6 +1630,7 @@
               <list>
                 <option value="mvn" />
                 <option value="package" />
+                <option value="-Dmaven.test.skip=true" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -1508,9 +1645,10 @@
       <method v="2" />
     </configuration>
     <configuration name="webPage" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="myShoppingManagement:war exploded">
+        <artifact name="myShoppingManagement:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -1573,24 +1711,28 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal=" package" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal=" package -Dmaven.test.skip=true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="myShoppingManagement:war exploded" />
+          <artifact name="myShoppingManagement:war" />
         </option>
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.IGoodsDaoTest.consume" />
+      <item itemvalue="JUnit.ISalemanDaoTest" />
+      <item itemvalue="JUnit.ISalemanDaoTest.delete" />
+      <item itemvalue="JUnit.GoodSaleServiceTest.transactionValid" />
+      <item itemvalue="JUnit.GoodSaleServiceTest" />
       <item itemvalue="Maven.myShoppingManagement" />
       <item itemvalue="Tomcat Server.webPage" />
-      <item itemvalue="HTTP Request.CashPageTest#2" />
-      <item itemvalue="HTTP Request.CashPageTest#3" />
-      <item itemvalue="HTTP Request.CashPageTest#4" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.CashPageTest#3" />
-        <item itemvalue="HTTP Request.CashPageTest#2" />
-        <item itemvalue="HTTP Request.CashPageTest#4" />
+        <item itemvalue="JUnit.GoodSaleServiceTest" />
+        <item itemvalue="JUnit.GoodSaleServiceTest.transactionValid" />
+        <item itemvalue="JUnit.ISalemanDaoTest.delete" />
+        <item itemvalue="JUnit.ISalemanDaoTest" />
+        <item itemvalue="JUnit.IGoodsDaoTest.consume" />
       </list>
     </recent_temporary>
   </component>
@@ -1608,7 +1750,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -1657,7 +1799,13 @@
       <workItem from="1585140996236" duration="11172000" />
       <workItem from="1585191029539" duration="752000" />
       <workItem from="1585323588329" duration="11091000" />
-      <workItem from="1585362234886" duration="13898000" />
+      <workItem from="1585362234886" duration="13972000" />
+      <workItem from="1587649535972" duration="35305000" />
+      <workItem from="1587782990322" duration="11728000" />
+      <workItem from="1587881473884" duration="5614000" />
+      <workItem from="1588131426703" duration="886000" />
+      <workItem from="1588138416157" duration="11145000" />
+      <workItem from="1588301774744" duration="7858000" />
     </task>
     <task id="LOCAL-00001" summary="Transfer to servlet version">
       <created>1584809753206</created>
@@ -1722,7 +1870,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585380151480</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update README template.">
+      <created>1585382056340</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585382056340</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改为SSM结构, 完成销售员管理, 当日销售记录">
+      <created>1587907914055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587907914055</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1750,7 +1912,9 @@
     <MESSAGE value="Turn to Maven management." />
     <MESSAGE value="Refactor using Spring-framework" />
     <MESSAGE value="采用Spring+servlet模式改造完成." />
-    <option name="LAST_COMMIT_MESSAGE" value="采用Spring+servlet模式改造完成." />
+    <MESSAGE value="Update README template." />
+    <MESSAGE value="修改为SSM结构, 完成销售员管理, 当日销售记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改为SSM结构, 完成销售员管理, 当日销售记录" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1775,17 +1939,20 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="278" y="45" width="800" height="675" key="#SQL_Dialects/0.0.1366.768@0.0.1366.768" timestamp="1585142683669" />
-    <state x="207" y="24" width="1012" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584975740896">
+    <state x="207" y="24" width="1012" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587907462006">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="207" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587907462006" />
     <state x="207" y="24" width="1012" height="675" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1584975740896" />
-    <state x="441" y="189" width="474" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584164142854">
+    <state x="441" y="189" width="530" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587650670881">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="441" y="189" width="530" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587650670881" />
     <state x="441" y="189" width="474" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1584164142854" />
-    <state x="491" y="96" width="467" height="573" key="#com.intellij.ide.util.MemberChooser" timestamp="1585374336243">
+    <state x="491" y="96" width="467" height="573" key="#com.intellij.ide.util.MemberChooser" timestamp="1588171603947">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="491" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588171603947" />
     <state x="491" y="96" width="467" height="573" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1585374336243" />
     <state x="308" y="23" width="800" height="675" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584894066344">
       <screen x="0" y="0" width="1366" height="768" />
@@ -1803,9 +1970,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="366" y="112" width="624" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1583917509695" />
-    <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585378548411">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="1837" y="310" width="498" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587658335564">
+      <screen x="1366" y="0" width="1440" height="900" />
     </state>
+    <state x="1837" y="310" width="498" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587658335564" />
+    <state x="1630" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587709870980">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1630" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587709870980" />
     <state x="250" y="0" width="846" height="766" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1585378548411" />
     <state x="416" y="133" width="524" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585329935890">
       <screen x="0" y="0" width="1366" height="768" />
@@ -1819,77 +1991,102 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="240" width="523" height="304" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1585150459857" />
-    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2" timestamp="1585380350515">
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2" timestamp="1587907911729">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1585380350515" />
+    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587907911729" />
+    <state x="250" y="0" width="855" height="766" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1585382056112" />
+    <state x="127" y="61" width="1092" height="642" key="DiffContextDialog" timestamp="1587907808865">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="127" y="61" width="1092" height="642" key="DiffContextDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587907808865" />
     <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl" timestamp="1584893844825">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="398" y="126" width="668" height="505" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1584893844825" />
-    <state width="1122" height="318" key="GridCell.Tab.0.bottom" timestamp="1585380936907">
+    <state width="1122" height="360" key="GridCell.Tab.0.bottom" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380936907" />
-    <state width="1122" height="318" key="GridCell.Tab.0.center" timestamp="1585380936905">
+    <state width="1122" height="360" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1392" height="286" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587709766823" />
+    <state width="1122" height="318" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585382090332" />
+    <state width="1122" height="360" key="GridCell.Tab.0.center" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585380936905" />
-    <state width="1122" height="318" key="GridCell.Tab.0.left" timestamp="1585380936904">
+    <state width="1122" height="360" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1392" height="286" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587709766822" />
+    <state width="1122" height="318" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585382090331" />
+    <state width="1122" height="360" key="GridCell.Tab.0.left" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585380936904" />
-    <state width="1122" height="318" key="GridCell.Tab.0.right" timestamp="1585380936906">
+    <state width="1122" height="360" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1392" height="286" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587709766822" />
+    <state width="1122" height="318" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585382090331" />
+    <state width="1122" height="360" key="GridCell.Tab.0.right" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585380936906" />
-    <state width="1122" height="318" key="GridCell.Tab.1.bottom" timestamp="1585380936909">
+    <state width="1122" height="360" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1392" height="286" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587709766823" />
+    <state width="1122" height="318" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585382090331" />
+    <state width="1122" height="360" key="GridCell.Tab.1.bottom" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380936909" />
-    <state width="1122" height="318" key="GridCell.Tab.1.center" timestamp="1585380936909">
+    <state width="1122" height="360" key="GridCell.Tab.1.bottom/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585382090333" />
+    <state width="1122" height="360" key="GridCell.Tab.1.center" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1585380936909" />
-    <state width="1122" height="318" key="GridCell.Tab.1.left" timestamp="1585380936908">
+    <state width="1122" height="360" key="GridCell.Tab.1.center/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1585382090333" />
+    <state width="1122" height="360" key="GridCell.Tab.1.left" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1585380936908" />
-    <state width="1122" height="318" key="GridCell.Tab.1.right" timestamp="1585380936909">
+    <state width="1122" height="360" key="GridCell.Tab.1.left/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1585382090333" />
+    <state width="1122" height="360" key="GridCell.Tab.1.right" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1585380936909" />
-    <state width="1122" height="318" key="GridCell.Tab.2.bottom" timestamp="1585380936908">
+    <state width="1122" height="360" key="GridCell.Tab.1.right/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1585382090333" />
+    <state width="1122" height="360" key="GridCell.Tab.2.bottom" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585380936908" />
-    <state width="1122" height="318" key="GridCell.Tab.2.center" timestamp="1585380936908">
+    <state width="1122" height="360" key="GridCell.Tab.2.bottom/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.2.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585382090333" />
+    <state width="1122" height="360" key="GridCell.Tab.2.center" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.center/0.0.1366.768@0.0.1366.768" timestamp="1585380936908" />
-    <state width="1122" height="318" key="GridCell.Tab.2.left" timestamp="1585380936908">
+    <state width="1122" height="360" key="GridCell.Tab.2.center/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.2.center/0.0.1366.768@0.0.1366.768" timestamp="1585382090332" />
+    <state width="1122" height="360" key="GridCell.Tab.2.left" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.left/0.0.1366.768@0.0.1366.768" timestamp="1585380936908" />
-    <state width="1122" height="318" key="GridCell.Tab.2.right" timestamp="1585380936908">
+    <state width="1122" height="360" key="GridCell.Tab.2.left/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.2.left/0.0.1366.768@0.0.1366.768" timestamp="1585382090332" />
+    <state width="1122" height="360" key="GridCell.Tab.2.right" timestamp="1588323249432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1122" height="318" key="GridCell.Tab.2.right/0.0.1366.768@0.0.1366.768" timestamp="1585380936908" />
-    <state width="1122" height="318" key="GridCell.Tab.3.bottom" timestamp="1585379745907">
+    <state width="1122" height="360" key="GridCell.Tab.2.right/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588323249432" />
+    <state width="1122" height="318" key="GridCell.Tab.2.right/0.0.1366.768@0.0.1366.768" timestamp="1585382090332" />
+    <state width="1122" height="492" key="GridCell.Tab.3.bottom" timestamp="1587718911767">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1122" height="492" key="GridCell.Tab.3.bottom/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587718911767" />
     <state width="1122" height="318" key="GridCell.Tab.3.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585379745907" />
-    <state width="1122" height="318" key="GridCell.Tab.3.center" timestamp="1585379745906">
+    <state width="1122" height="492" key="GridCell.Tab.3.center" timestamp="1587718911767">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1122" height="492" key="GridCell.Tab.3.center/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587718911767" />
     <state width="1122" height="318" key="GridCell.Tab.3.center/0.0.1366.768@0.0.1366.768" timestamp="1585379745906" />
-    <state width="1122" height="318" key="GridCell.Tab.3.left" timestamp="1585379745906">
+    <state width="1122" height="492" key="GridCell.Tab.3.left" timestamp="1587718911767">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1122" height="492" key="GridCell.Tab.3.left/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587718911767" />
     <state width="1122" height="318" key="GridCell.Tab.3.left/0.0.1366.768@0.0.1366.768" timestamp="1585379745906" />
-    <state width="1122" height="318" key="GridCell.Tab.3.right" timestamp="1585379745907">
+    <state width="1122" height="492" key="GridCell.Tab.3.right" timestamp="1587718911767">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1122" height="492" key="GridCell.Tab.3.right/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587718911767" />
     <state width="1122" height="318" key="GridCell.Tab.3.right/0.0.1366.768@0.0.1366.768" timestamp="1585379745907" />
     <state width="902" height="184" key="GridCell.Tab.4.bottom" timestamp="1583936749366">
       <screen x="0" y="0" width="1366" height="768" />
@@ -1915,33 +2112,43 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="266" y="121" width="824" height="524" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1584783009558" />
-    <state x="216" y="42" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1585373714447">
+    <state x="216" y="42" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1588322349612">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="216" y="42" width="924" height="682" key="Maven.ArtifactSearchDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588322349612" />
+    <state x="1594" y="49" width="924" height="682" key="Maven.ArtifactSearchDialog/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587705771532" />
     <state x="216" y="42" width="924" height="682" key="Maven.ArtifactSearchDialog/0.0.1366.768@0.0.1366.768" timestamp="1585373714447" />
     <state x="500" y="321" width="355" height="124" key="ReplaceDuplicatesPrompt" timestamp="1583939832576">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="500" y="321" width="355" height="124" key="ReplaceDuplicatesPrompt/0.0.1366.768@0.0.1366.768" timestamp="1583939832576" />
-    <state x="241" y="0" width="951" height="766" key="SettingsEditor" timestamp="1585373821008">
+    <state x="1801" y="163" width="560" height="572" key="RollbackChangesDialog" timestamp="1587707163168">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="1801" y="163" width="560" height="572" key="RollbackChangesDialog/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587707163168" />
+    <state x="241" y="0" width="1024" height="766" key="SettingsEditor" timestamp="1587907666485">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="241" y="0" width="1024" height="766" key="SettingsEditor/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587907666485" />
     <state x="241" y="0" width="951" height="766" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1585373821008" />
-    <state width="498" height="542" key="SwitcherDM" timestamp="1585334813534">
+    <state width="498" height="542" key="SwitcherDM" timestamp="1588320588233">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="498" height="542" key="SwitcherDM/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588320588233" />
     <state width="498" height="542" key="SwitcherDM/0.0.1366.768@0.0.1366.768" timestamp="1585334813534" />
-    <state x="278" y="120" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1585380405758">
+    <state x="278" y="120" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1587907929624">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="278" y="120" key="Vcs.Push.Dialog.v2/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587907929624" />
     <state x="278" y="120" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1585380405758" />
     <state x="395" y="0" width="566" height="766" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1585150540077">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="395" y="0" width="566" height="766" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.768@0.0.1366.768" timestamp="1585150540077" />
-    <state x="372" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1585191116010">
+    <state x="372" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1588138416599">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="372" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1588138416599" />
     <state x="372" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585191116010" />
     <state x="391" y="278" width="565" height="226" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584893835882">
       <screen x="0" y="0" width="1366" height="768" />
@@ -1951,9 +2158,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="289" y="77" width="845" height="610" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1366.768@0.0.1366.768" timestamp="1585327039769" />
-    <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585375607138">
+    <state x="396" y="89" width="554" height="474" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587717316616">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="396" y="89" width="554" height="474" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587717316616" />
+    <state x="1783" y="104" width="535" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587708754706" />
     <state x="396" y="89" width="564" height="588" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1585375607138" />
     <state x="416" y="152" width="524" height="470" key="extract.method.dialog" timestamp="1583939825405">
       <screen x="0" y="0" width="1366" height="768" />
@@ -1967,17 +2176,24 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="298" y="346" width="500" height="295" key="git4idea.ui.GitTagDialog/0.0.1366.768@0.0.1366.768" timestamp="1585380290290" />
-    <state width="491" height="381" key="javadoc.popup.new" timestamp="1585372409828">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="518" height="447" key="javadoc.popup.new" timestamp="1587708545221">
+      <screen x="1366" y="0" width="1440" height="900" />
     </state>
+    <state width="518" height="447" key="javadoc.popup.new/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587708545221" />
     <state width="491" height="381" key="javadoc.popup.new/0.0.1366.768@0.0.1366.768" timestamp="1585372409828" />
     <state x="78" y="82" width="1199" height="601" key="new project wizard" timestamp="1584868651248">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="78" y="82" width="1199" height="601" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1584868651248" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1585381340473">
+    <state x="428" y="12" width="500" height="741" key="refactoring.ChangeSignatureDialog" timestamp="1587793790248">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="428" y="12" width="500" height="741" key="refactoring.ChangeSignatureDialog/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587793790248" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup" timestamp="1587696913932">
+      <screen x="1366" y="0" width="1440" height="900" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768/1366.0.1440.900@0.0.1366.768" timestamp="1587651830980" />
+    <state x="1731" y="104" width="709" height="795" key="search.everywhere.popup/0.0.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1587696913932" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1585381340473" />
     <state x="338" y="68" width="679" height="630" key="spring file set editor" timestamp="1585323809599">
       <screen x="0" y="0" width="1366" height="768" />

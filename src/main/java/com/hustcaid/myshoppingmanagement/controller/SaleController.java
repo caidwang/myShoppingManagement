@@ -24,6 +24,7 @@ public class SaleController {
 
     @GetMapping
     public String mian(Model model) {
+        // todo: 按日查看
         List<GoodSaleVO> goodSaleVOList = goodSaleDao.getByDate(LocalDate.now());
         model.addAttribute("goodsaleColletions", goodSaleVOList);
         return "sales";

@@ -38,7 +38,6 @@ mvn package
 
 注: 页面前端部分没有完全实现完, 主要是ajax和js逻辑不完整, 如需获取最新的页面模板, 从最新版本`src/main/webapp/templates`目录下拷贝回到当前版本相同目录进行覆盖.
 
-后端除页面外遵循Restful接口规范. API测试位于`test/`目录下, .
 
 当前版本相关技术知识点:
 - xx
