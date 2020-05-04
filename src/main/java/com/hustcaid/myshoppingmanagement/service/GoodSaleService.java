@@ -10,5 +10,5 @@ import java.util.List;
  *
  ******************************************************************************/
 public interface GoodSaleService {
-    boolean transaction(List<GoodSale> gsList);
+    void transaction(List<GoodSale> gsList);
 }

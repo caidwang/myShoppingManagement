@@ -38,7 +38,7 @@
     <!--    </bean>-->
 
     <!--mybatis配置, 1. 数据源-->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="jdbcUrl" value="${jdbc.url}"/>
         <property name="driverClass" value="${jdbc.driver}"/>
         <property name="user" value="${jdbc.username}"/>

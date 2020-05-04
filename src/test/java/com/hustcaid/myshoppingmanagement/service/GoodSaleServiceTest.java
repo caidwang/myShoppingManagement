@@ -16,8 +16,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 /******************************************************************************
@@ -50,9 +50,7 @@ class GoodSaleServiceTest {
 
         when(goodsDao.consume(2, 3)).thenReturn(1);
         when(goodSaleDao.addGoodSale(goodSale1)).thenReturn(1);
-
-        boolean ok = goodSaleService.transaction(list);
-        assertTrue(ok);
+        assertDoesNotThrow(() -> goodSaleService.transaction(list));
     }
 
     @Test

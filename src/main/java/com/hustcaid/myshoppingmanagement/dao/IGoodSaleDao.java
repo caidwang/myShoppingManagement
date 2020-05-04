@@ -22,7 +22,6 @@ public interface IGoodSaleDao {
      * @return
      */
     @Insert(value = "insert into GSALES (GID, SID, SDATE, SNUM) values (#{GID}, #{SID}, #{date}, #{numToSale})")
-//    @SelectKey(keyColumn = "GSID", keyProperty = "GSID", before = false, resultType = Integer.class, statement = "select last_insert_id()")
     @Options(useGeneratedKeys = true, keyProperty = "GSID", keyColumn = "GSID")
     int addGoodSale(GoodSale goodSale);
 

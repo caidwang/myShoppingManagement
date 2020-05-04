@@ -39,9 +39,4 @@ public class Good {
         this.gId = id;
     }
 
-    @Override
-    public String toString() {
-        return "Good[id:" + gId + " name:" + gName + " price:" + gPrice + " num:" + gNum + "]";
-    }
-
 }

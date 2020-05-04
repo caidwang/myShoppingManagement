@@ -23,19 +23,21 @@ public class GoodSaleServiceImpl implements GoodSaleService {
     @Autowired
     private IGoodsDao goodsDao;
 
+    /**
+     * @param gsList
+     * @throws RuntimeException 当事务失败时, 方法抛出运行时异常引起回滚
+     */
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.DEFAULT)
-    public boolean transaction(List<GoodSale> gsList) {
-        if (gsList == null || gsList.size() == 0) return false;
-        boolean success = true;
+    public void transaction(List<GoodSale> gsList) throws RuntimeException {
+        if (gsList == null || gsList.size() == 0) return;
         for (GoodSale gs : gsList) {
-            success = success && (goodSaleDao.addGoodSale(gs) == 1);
+            boolean success = goodSaleDao.addGoodSale(gs) == 1;
             success = success && (goodsDao.consume(gs.getGID(), gs.getNumToSale()) == 1);
             // 注意Spring事务只在遇到RuntimeException时会回滚
             if (!success) {
                 throw new RuntimeException("transaction fail on " + gs);
             }
         }
-        return success;
     }
 }

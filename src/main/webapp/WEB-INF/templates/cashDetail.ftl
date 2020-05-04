@@ -22,60 +22,58 @@
 <h1 style="text-align: center">收银平台</h1>
 <div class="container">
     <div class="col-lg-4 col-lg-offset-4 text-center">收银员: <span id="saleman">${saleman.sname}</span></div>
+    <div class="col-lg-6 col-lg-offset-3" style="margin-top: 40px">
+        <input class="col-lg-6 col-lg-offset-3" type="text" placeholder="请输入商品" id="searchKey">
+        <button type="button" class="btn btn-default" aria-label="Left Align" id="search-good">
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+        </button>
+    </div>
     <div class="row col-md-8 col-md-offset-2" style="margin-top: 40px">
+        <#if msg?? >
+            <div class="alert alert-info" role="alert">${msg}</div>
+        </#if>
         <table class="table">
             <thead>
             <tr>
                 <th>商品</th>
                 <th>单价</th>
-                <th>购买数量</th>
-                <th>金额</th>
-                <th>删除</th>
+                <th>数量</th>
+                <th>选择</th>
             </tr>
             </thead>
             <tbody>
-            <#list cartItems as item>
+            <#list goods as good>
                 <tr>
-                    <td>${item.goodName}</td>
-                    <td>${item.goodPrice}</td>
-                    <td>${item.amount}</td>
-                    <td>${item.sumMoney}</td>
+                    <td>${good.GName}</td>
+                    <td>${good.GPrice}</td>
+                    <td><input type="number" id="input-${good.GName}" max="${good.GNum}"/></td>
                     <td>
-                        <button type="button" class="btn btn-danger" aria-label="Left Align" id="delete-${item?index}">
-                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                        </button>
+                        <button type="button" class="btn btn-primary" id="select-${good.GName}">选择</button>
                     </td>
                 </tr>
             </#list>
             </tbody>
         </table>
     </div>
-</div>
-<div class="row col-lg-8 col-lg-offset-2 ">
-    <div class="col-lg-2 col-lg-offset-6 text-center" style="line-height: 2;"><b>总计<span id="totalBill">${total}</span>元</b>
-    </div>
-    <div>
-        <button type="button" class="btn btn-primary" id="addItem">继续添加</button>
-        <button type="button" class="btn btn-primary" id="check">结账</button>
-    </div>
+
 </div>
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script>
-    $("#addItem").click(function () {
-        window.location.href = "/cash/details";
+    $("#search-good").click(function () {
+        var str = $("#searchKey").val();
+        window.location.href = "/cash/details?searchKey=" + str;
     });
-    $("#check").click(function () {
-        window.location.href = "/cash/check";
-    });
-    $('button[id^=delete]').click(function () {
-        var id = $(this)[0].id.split("-")[1];
-        console.log(id);
-        var msg = confirm("确定删除商品?");
-        if (msg === true) {
-            window.location.href = "/cash/delete/" + id;
+    $('button[id^=select-]').click(function () {
+        let name = $(this)[0].id.split("-")[1];
+        var amountInputId = "#input-" + name;
+        var amount = $(amountInputId).val();
+        if (amount === "") {
+            alert("购买数量不为空");
+        } else {
+            window.location.href = "/cash/addItem?goodName=" + name + "&amount=" + amount;
         }
     });
 </script>
